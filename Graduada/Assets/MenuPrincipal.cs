@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
     // Start is called before the first frame update
-    LogicaCambioNivel nivel = new LogicaCambioNivel();
+    ChangeLevelLogic level = new ChangeLevelLogic();
     public void PlayGame(){
       //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-      nivel.comenzar();
+      level.start();
     }
 
     public void QuitGame(){
