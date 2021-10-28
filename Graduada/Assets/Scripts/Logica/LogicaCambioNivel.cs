@@ -10,6 +10,7 @@ public class LogicaCambioNivel : MonoBehaviour
     public int menuOpciones = 2;
     public int piso = 3;
     public int calle = 4;
+    public int menuPausa = 5;
 
     public void comenzar(){
         //Cargar partida reciente
@@ -25,6 +26,9 @@ public class LogicaCambioNivel : MonoBehaviour
     public void salirCalle(){
         //generador ?
         SceneManager.LoadScene(calle);
+    }
+     public void cargarMenuPrincipal(){
+       SceneManager.LoadScene(menuPrincipal);
     }
 
 }
