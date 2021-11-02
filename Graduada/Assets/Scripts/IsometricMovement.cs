@@ -4,35 +4,41 @@ using UnityEngine;
 
 public class IsometricMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField]
-    float moveSpeed = 10f;
-    Vector3 forward, right;
+    CharacterController characterController;
+
+    public float speed = 12;
+    public float jumpSpeed = 16.0f;
+    public float gravity = 40.0f;
+
+    private Vector3 moveDirection = Vector3.zero;
 
     void Start()
     {
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = Vector3.Normalize(forward);
-        right = Quaternion.Euler(new Vector3(0,90,0)) * forward;
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if(Input.anyKey) Move();
-    }
+        if (characterController.isGrounded)
+        {
+            // We are grounded, so recalculate
+            // move direction directly from axes
 
-    void Move(){
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            moveDirection *= speed;
 
-        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+            if (Input.GetButton("Jump"))
+            {
+                moveDirection.y = jumpSpeed;
+            }
+        }
 
-        transform.forward = heading;
-        transform.position += rightMovement;
-        transform.position += upMovement;
+        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+        // as an acceleration (ms^-2)
+        moveDirection.y -= gravity * Time.deltaTime;
 
+        // Move the controller
+        characterController.Move(moveDirection * Time.deltaTime);
     }
 }
