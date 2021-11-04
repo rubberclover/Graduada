@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Pruebas/Menu/MenuCargarPartida.unity
     guid: 8afbe33245714f24bb1d7758db18acc2
   - enabled: 1
-    path: Assets/Scenes/Pruebas/Menu/MenuOpciones.unity
+    path: Assets/Scenes/Pruebas/Menu/MenuPausa.unity
     guid: b21167d60e98d9449b20ec3f5eba332a
   - enabled: 1
     path: Assets/Scenes/Pruebas/Piso.unity
