@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Sectario : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float lookRadius = 10f;
 

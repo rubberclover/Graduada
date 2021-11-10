@@ -388,6 +388,8 @@ GameObject:
   - component: {fileID: 1214471941}
   - component: {fileID: 1214471940}
   - component: {fileID: 1214471939}
+  - component: {fileID: 1214471943}
+  - component: {fileID: 1214471944}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -471,6 +473,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1214471943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214471938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33735eab85f4574dbc0a40cf7c61004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  jumpSpeed: 16
+  gravity: 40
+--- !u!114 &1214471944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214471938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f212385c8224f14da0d33678e495aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 10
+  energia: 10
+  rb: {fileID: 0}
 --- !u!1 &1258276871
 GameObject:
   m_ObjectHideFlags: 0
