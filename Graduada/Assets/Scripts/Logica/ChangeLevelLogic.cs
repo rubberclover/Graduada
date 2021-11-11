@@ -27,4 +27,8 @@ public class ChangeLevelLogic : MonoBehaviour
         SceneManager.LoadScene(street);
     }
 
+    public void goMainMenu(){
+        SceneManager.LoadScene(mainMenu);
+    }
+
 }

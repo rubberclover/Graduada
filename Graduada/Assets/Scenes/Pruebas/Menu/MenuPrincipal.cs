@@ -8,7 +8,6 @@ public class MenuPrincipal : MonoBehaviour
     // Start is called before the first frame update
     ChangeLevelLogic level = new ChangeLevelLogic();
     public void PlayGame(){
-      //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
       level.start();
     }
 
