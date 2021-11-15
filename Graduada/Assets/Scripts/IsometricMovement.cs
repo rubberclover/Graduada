@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsometricMovimentStreets : MonoBehaviour
-{   
+public class IsometricMovement : MonoBehaviour
+{
     CharacterController characterController;
+
     public float speed = 12;
     public float jumpSpeed = 16.0f;
     public float gravity = 40.0f;
@@ -23,7 +24,7 @@ public class IsometricMovimentStreets : MonoBehaviour
             // We are grounded, so recalculate
             // move direction directly from axes
 
-            moveDirection = new Vector3(Input.GetAxis("HorizontalStreet"), 0.0f, Input.GetAxis("VerticalStreet"));
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDirection *= speed;
 
             if (Input.GetButton("Jump"))

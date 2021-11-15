@@ -329,7 +329,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direccion: 2
   rand: 0
-<<<<<<< HEAD
 --- !u!1 &4332788490985286160
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +389,6 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: d14ea4d0d8fefb342ad517fd777ee0ed, type: 2}
-=======
->>>>>>> 285c8e6643abf8f8b55d4fae7068d802447717e1
 --- !u!1 &8572322484792515072
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +414,7 @@ Transform:
   m_GameObject: {fileID: 8572322484792515072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6816308455978442645}
   - {fileID: 7576273943938893801}
