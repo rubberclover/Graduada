@@ -8,8 +8,6 @@ TagManager:
   - SpawnPoint
   - Colision
   - ListasHabitaciones
-  - transparencyZone
-  - edificio1
   layers:
   - Default
   - TransparentFX
