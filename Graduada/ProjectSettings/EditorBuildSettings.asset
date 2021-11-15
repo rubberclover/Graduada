@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas/Piso.unity
     guid: b9edc5c3e50a2604ea5be085a8517358
+  - enabled: 1
+    path: Assets/Scenes/Pruebas/Generacion mundo/Nivel_1.unity
+    guid: e6aac94f30046ac428a6cdf8fb2ae753
   m_configObjects: {}

@@ -23,7 +23,7 @@ public class acciones_Piso : MonoBehaviour
         {
             if(col.CompareTag("zonaSalida"))
             {
-                level.goMainMenu();
+                level.goStreets();
             }
         }
     }
