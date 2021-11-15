@@ -85,7 +85,7 @@ public class Spawner : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider otro){
-        if(otro.CompareTag("SpawnPoint") && otro.GetComponent<Spawner>().spawned == true){
+        if(otro.CompareTag("SpawnPoint")){
             Destroy(gameObject);
         }
         if(otro.CompareTag("Colision")){
