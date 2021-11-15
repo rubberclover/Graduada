@@ -8,5 +8,7 @@ public class Templates : MonoBehaviour
     public GameObject[] TopRooms;
     public GameObject[] LeftRooms;
     public GameObject[] RightRooms;
+    public int maxHab;
+    public static int numHab;
 
 }
