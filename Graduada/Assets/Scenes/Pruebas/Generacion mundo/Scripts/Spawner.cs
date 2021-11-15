@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Spawner : MonoBehaviour
 {
+
+   
     public int direccion;
     // Puertas que tiene que tener la habitaci�n que aparecer� en ese punto
     // 1 = Puerta hacia abajo
@@ -17,6 +20,7 @@ public class Spawner : MonoBehaviour
     {
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
         Invoke("Spawn", 0.1f);
+    
     }
     void Spawn()
     {
