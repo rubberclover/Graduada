@@ -921,6 +921,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265175042, guid: 0cccb8a4262fd0e4695f1bb915834e7b, type: 3}
+      propertyPath: launchVelocity
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 265175042, guid: 0cccb8a4262fd0e4695f1bb915834e7b, type: 3}
+      propertyPath: shootingDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2677069884492965204, guid: 0cccb8a4262fd0e4695f1bb915834e7b, type: 3}
       propertyPath: m_RootOrder
       value: 2
