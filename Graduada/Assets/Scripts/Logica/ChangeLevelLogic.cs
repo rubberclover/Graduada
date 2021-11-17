@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeLevelLogic : MonoBehaviour
+public class ChangeLevelLogic
 {
     public int mainMenu = 0;
     public int loadMenu = 1;
