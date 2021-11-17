@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
     {
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
         maxHab = templates.maxHab;
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", 1.0f);
     }
     void Spawn()
     {
@@ -30,11 +30,13 @@ public class Spawner : MonoBehaviour
                 tamano = templates.BottomRooms.Length;
                 if(Templates.numHab == maxHab){
                     Debug.Log("Arriba max");
+                    Destroy(gameObject);
                     Instantiate(templates.BottomRooms[tamano-1], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
                 }
                 else{
                     Debug.Log("Arriba");
                     rand = Random.Range(0, tamano);
+                    Destroy(gameObject);
                     Instantiate(templates.BottomRooms[rand], transform.position, templates.BottomRooms[rand].transform.rotation);
                     Templates.numHab+=1;
                 }
@@ -44,10 +46,12 @@ public class Spawner : MonoBehaviour
                 tamano = templates.TopRooms.Length;
                 if(Templates.numHab == maxHab){
                     Debug.Log("Abajo max");
+                    Destroy(gameObject);
                     Instantiate(templates.TopRooms[tamano -1], transform.position, templates.TopRooms[tamano -1].transform.rotation);
                 }else{
                     Debug.Log("Abajo");
                     rand = Random.Range(0,tamano);
+                    Destroy(gameObject);
                     Instantiate(templates.TopRooms[rand], transform.position, templates.TopRooms[rand].transform.rotation);
                     Templates.numHab+=1;
                 }
@@ -57,10 +61,12 @@ public class Spawner : MonoBehaviour
                 tamano = templates.LeftRooms.Length;
                 if(Templates.numHab == maxHab){
                     Debug.Log("Der max");
+                    Destroy(gameObject);
                     Instantiate(templates.LeftRooms[tamano-1], transform.position, templates.LeftRooms[tamano-1].transform.rotation);
                 }else{
                     Debug.Log("Derecha");
                     rand = Random.Range(0, tamano);
+                    Destroy(gameObject);
                     Instantiate(templates.LeftRooms[rand], transform.position, templates.LeftRooms[rand].transform.rotation);
                     Templates.numHab+=1;
                 }
@@ -70,10 +76,12 @@ public class Spawner : MonoBehaviour
                 tamano = templates.RightRooms.Length;
                 if(Templates.numHab == maxHab){
                     Debug.Log("Izq max");
+                    Destroy(gameObject);
                     Instantiate(templates.RightRooms[tamano-1], transform.position, templates.RightRooms[tamano-1].transform.rotation);
                 }else{
                     Debug.Log("Izquierda");
                     rand = Random.Range(0, tamano);
+                    Destroy(gameObject);
                     Instantiate(templates.RightRooms[rand], transform.position, templates.RightRooms[rand].transform.rotation);
                     Templates.numHab+=1;
                 }
@@ -85,11 +93,11 @@ public class Spawner : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider otro){
-        if(otro.CompareTag("SpawnPoint")){
-            Destroy(gameObject);
-        }
+        //if(otro.CompareTag("SpawnPoint")){
+          //  Destroy(gameObject);
+        //}
         if(otro.CompareTag("Colision")){
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
