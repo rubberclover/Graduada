@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public int direccion;
-    // Puertas que tiene que tener la habitaci�n que aparecer� en ese punto
+    // Puertas que tiene que tener la habitacion que aparecera en ese punto
     // 1 = Puerta hacia abajo (++)
     // 2 = Puerta hacia arriba (--)
     // 3 = Puerta hacia la izquierda (++)
