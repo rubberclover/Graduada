@@ -9,7 +9,7 @@ public class acciones_Piso : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //if se han enviado objetos then mostrar cartel
     }
 
     // Update is called once per frame
