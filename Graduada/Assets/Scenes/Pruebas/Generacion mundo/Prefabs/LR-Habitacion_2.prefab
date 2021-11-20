@@ -709,6 +709,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
+    - target: {fileID: -7023974396876390944, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd08a31ea590764b887894b0a552f30, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c599839942b05840a38a522a83071f9, type: 3}
       propertyPath: m_Name
       value: valla (2)
@@ -788,6 +796,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
+    - target: {fileID: -7023974396876390944, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd08a31ea590764b887894b0a552f30, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c599839942b05840a38a522a83071f9, type: 3}
       propertyPath: m_Name
       value: valla (1)
@@ -867,10 +883,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 59.907
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ec903068844882469eeda2b449d6098, type: 2}
+    - target: {fileID: -1076622865230832474, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
+    - target: {fileID: 505279753531975417, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
     - target: {fileID: 919132149155446097, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
       propertyPath: m_Name
       value: escombro1
       objectReference: {fileID: 0}
+    - target: {fileID: 3996715374946979927, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
 --- !u!1 &2337642549079979646 stripped
@@ -974,6 +1006,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: muroyvalla
       objectReference: {fileID: 0}
+    - target: {fileID: 2380718651202138832, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ec903068844882469eeda2b449d6098, type: 2}
+    - target: {fileID: 8616184511030011274, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ec903068844882469eeda2b449d6098, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
 --- !u!4 &4222284157819962335 stripped
@@ -1049,6 +1089,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
+    - target: {fileID: -7023974396876390944, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd08a31ea590764b887894b0a552f30, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c599839942b05840a38a522a83071f9, type: 3}
       propertyPath: m_Name
       value: valla
@@ -1128,6 +1176,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
+    - target: {fileID: -7023974396876390944, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd08a31ea590764b887894b0a552f30, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c599839942b05840a38a522a83071f9, type: 3}
       propertyPath: m_Name
       value: valla (3)
@@ -1207,10 +1263,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 118.448
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ec903068844882469eeda2b449d6098, type: 2}
+    - target: {fileID: -1076622865230832474, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ab7fa5b05958954e97cc3b531991a71, type: 2}
+    - target: {fileID: 505279753531975417, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ab7fa5b05958954e97cc3b531991a71, type: 2}
     - target: {fileID: 919132149155446097, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
       propertyPath: m_Name
       value: escombro1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3996715374946979927, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ab7fa5b05958954e97cc3b531991a71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4b871bc5956fd4ab379da801e9b2e1, type: 3}
 --- !u!4 &5861978244228618833 stripped
