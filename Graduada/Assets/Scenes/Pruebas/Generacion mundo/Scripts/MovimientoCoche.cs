@@ -17,8 +17,7 @@ public class MovimientoCoche : MonoBehaviour
         if (transform.position == new Vector3(-70,5,-30)){
             Debug.Log(transform.position);
             Debug.Log(new Vector3(-70,5,-30));
-            //transform.Translate(140 * Time.deltaTime,0,0, Space.World);
-            transform.Translate(new Vector3(140 * Time.deltaTime,0,0));
+            transform.Translate(140 * Time.deltaTime,0,0, Space.World);
         }
         else if (transform.position == new Vector3(-70,5,30)){
             transform.Translate(new Vector3(140 * Time.deltaTime,0,0));
@@ -26,8 +25,8 @@ public class MovimientoCoche : MonoBehaviour
         }
         else if (transform.position == new Vector3(60,5,-40)){
             transform.Translate(new Vector3(0,0, 140 * Time.deltaTime));
-            transform.Translate(140 * Time.deltaTime,0,0, Space.World);
-            transform.Translate(140 * Time.deltaTime,0,0);
+
+            
 
         }
         else{
