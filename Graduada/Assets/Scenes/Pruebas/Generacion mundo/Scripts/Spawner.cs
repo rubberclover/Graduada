@@ -93,9 +93,6 @@ public class Spawner : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider otro){
-        //if(otro.CompareTag("SpawnPoint")){
-          //  Destroy(gameObject);
-        //}
         if(otro.CompareTag("Colision")){
             Destroy(transform.parent.gameObject);
         }
