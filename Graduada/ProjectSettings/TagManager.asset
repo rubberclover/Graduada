@@ -10,6 +10,10 @@ TagManager:
   - ListasHabitaciones
   - transparencyZone
   - edificio1
+  - Carretera1
+  - Carretera2
+  - Carretera3
+  - Carretera4
   layers:
   - Default
   - TransparentFX

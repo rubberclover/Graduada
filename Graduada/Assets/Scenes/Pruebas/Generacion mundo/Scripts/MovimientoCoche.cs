@@ -14,24 +14,22 @@ public class MovimientoCoche : MonoBehaviour
     void Update()
     {
         
-        if (transform.position == new Vector3(-70,5,-30)){
-            Debug.Log(transform.position);
-            Debug.Log(new Vector3(-70,5,-30));
-            transform.Translate(140 * Time.deltaTime,0,0, Space.World);
-        }
-        else if (transform.position == new Vector3(-70,5,30)){
-            transform.Translate(new Vector3(140 * Time.deltaTime,0,0));
+        // if (gameObject.tag == "Carretera1"){
+        //     transform.Translate(140 * Time.deltaTime,0,0);
+        // }
+        // else if (gameObject.tag == "Carretera2"){
+        //     transform.Translate(new Vector3(140 * Time.deltaTime,0,0));
 
-        }
-        else if (transform.position == new Vector3(60,5,-40)){
-            transform.Translate(new Vector3(0,0, 140 * Time.deltaTime));
+        // }
+        // else if (gameObject.tag == "Carretera3"){
+        //     transform.Translate(new Vector3(0,0, 140 * Time.deltaTime));
 
             
 
-        }
-        else{
-            transform.Translate(new Vector3(0,0,140 * Time.deltaTime));
+        // }
+        // else if (gameObject.tag == "Carretera4"){
+        //     transform.Translate(new Vector3(0,0,140 * Time.deltaTime));
 
-        }
+        // }
     }
 }

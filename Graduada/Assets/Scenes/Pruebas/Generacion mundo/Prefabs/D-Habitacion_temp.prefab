@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 6874505456283661725}
   - component: {fileID: 8788953682815920668}
   - component: {fileID: 7219201580685162}
+  - component: {fileID: 7256772810581008477}
   m_Layer: 0
   m_Name: Carretera4
   m_TagString: Untagged
@@ -228,11 +229,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170345717967983516}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 73.14112, z: 10.000002}
   m_Center: {x: -0, y: 28.903797, z: 0}
+--- !u!114 &7256772810581008477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170345717967983516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
 --- !u!1 &1884345410268210522
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +430,7 @@ GameObject:
   - component: {fileID: 6907644282037565095}
   - component: {fileID: 2781148779552269933}
   - component: {fileID: 7626338660480795852}
+  - component: {fileID: 2932605646897798671}
   m_Layer: 0
   m_Name: Carretera2
   m_TagString: Untagged
@@ -508,11 +523,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3416458633760237777}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9.999999, y: 58.401386, z: 10}
   m_Center: {x: 0, y: 22.074827, z: 0}
+--- !u!114 &2932605646897798671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416458633760237777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
 --- !u!1 &3475239032451804441
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +554,7 @@ GameObject:
   - component: {fileID: 5946328942430673426}
   - component: {fileID: 2104726194539461269}
   - component: {fileID: 6733224111049026800}
+  - component: {fileID: 4231307436317320153}
   m_Layer: 0
   m_Name: Carretera3
   m_TagString: Untagged
@@ -618,11 +647,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475239032451804441}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 50.5562, z: 10.000002}
   m_Center: {x: 0, y: 19.938705, z: 0}
+--- !u!114 &4231307436317320153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475239032451804441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
 --- !u!65 &2433638688145612478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -785,6 +827,7 @@ GameObject:
   - component: {fileID: 8390075717434173789}
   - component: {fileID: 3008405040796290255}
   - component: {fileID: 1048793694864989032}
+  - component: {fileID: 2854868324578353116}
   m_Layer: 0
   m_Name: Carretera1
   m_TagString: Untagged
@@ -877,11 +920,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5767192044547102857}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.92645, y: 54.290222, z: 10}
-  m_Center: {x: -2.6645455, y: 23.514256, z: 0}
+  m_Size: {x: 5.439207, y: 54.290222, z: 10}
+  m_Center: {x: -2.4209242, y: 23.514256, z: 0}
 --- !u!65 &1048793694864989032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -890,11 +933,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5767192044547102857}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.834367, y: 61.19598, z: 10}
   m_Center: {x: 4.0828667, y: 21.711267, z: 0}
+--- !u!114 &2854868324578353116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767192044547102857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
 --- !u!65 &89090539004675877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1728,14 +1784,14 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b63276c46bab6a14484721d2de096729, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3be8629a0c4499641a26eaebb37a8754, type: 3}
---- !u!1 &8068055696012809591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3be8629a0c4499641a26eaebb37a8754, type: 3}
-  m_PrefabInstance: {fileID: 7148923695034279974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7258867207627165645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3be8629a0c4499641a26eaebb37a8754, type: 3}
+  m_PrefabInstance: {fileID: 7148923695034279974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8068055696012809591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3be8629a0c4499641a26eaebb37a8754, type: 3}
   m_PrefabInstance: {fileID: 7148923695034279974}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7276001787024520922

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coches : MonoBehaviour
+public class CochesInicial : MonoBehaviour
 {
     public GameObject Coche;
     // Start is called before the first frame update
@@ -17,17 +17,22 @@ public class Coches : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider otro){
+        // 280, 20, 120
         if(otro.CompareTag("Player")){
             if(gameObject.name == "Carretera1"){
+                Coche.tag = "Carretera1";
                 Instantiate(Coche, new Vector3(-70,5,-30), Quaternion.identity, transform.parent.parent);
             }
-            if(gameObject.name == "Carretera2"){
+            else if(gameObject.name == "Carretera2"){
+                Coche.tag = "Carretera2";
                 Instantiate(Coche, new Vector3(-70,5,30), Quaternion.identity, transform.parent.parent);
             }
-            if(gameObject.name == "Carretera3"){
+            else if(gameObject.name == "Carretera3"){
+                Coche.tag = "Carretera3";
                 Instantiate(Coche, new Vector3(60,5,-40), Quaternion.identity, transform.parent.parent);
             }
-            if(gameObject.name == "Carretera4"){
+            else if(gameObject.name == "Carretera4"){
+                Coche.tag = "Carretera4";
                 Instantiate(Coche, new Vector3(-60,5,-40), Quaternion.identity, transform.parent.parent);
             }
         }
