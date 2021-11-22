@@ -5,6 +5,7 @@ using UnityEngine;
 public class CochesGeneral : MonoBehaviour
 {
     public GameObject Coche;
+    public  Vector3 coord;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,24 +22,24 @@ public class CochesGeneral : MonoBehaviour
         // 160,20,120
         if(otro.CompareTag("Player")){
             if(gameObject.name == "Carretera1"){
-                Debug.Log(gameObject.transform.parent.parent);
                 Coche.tag = "Carretera1";
-                Instantiate(Coche, new Vector3(-40,5,-30), Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                
             }
             else if(gameObject.name == "Carretera2"){
-                Debug.Log(transform.parent.parent);
                 Coche.tag = "Carretera2";
-                Instantiate(Coche, new Vector3(-40,5,30), Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                
             }
             else if(gameObject.name == "Carretera3"){
-                Debug.Log(transform.parent.parent);
                 Coche.tag = "Carretera3";
-                Instantiate(Coche, new Vector3(30,5,-40), Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                
             }
             else if(gameObject.name == "Carretera4"){
-                Debug.Log(transform.parent.parent);
                 Coche.tag = "Carretera4";
-                Instantiate(Coche, new Vector3(-30,5,-40), Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                
             }
         }
     }
