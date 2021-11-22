@@ -21,7 +21,6 @@ public class CochesGeneral : MonoBehaviour
        
         // 160,20,120
         if(otro.CompareTag("Player")){
-            if(otro.CompareTag("Carretera1") || otro.CompareTag("Carretera2") || otro.CompareTag("Carretera3") || otro.CompareTag("Carretera4")) Destroy(gameObject);
             if(gameObject.name == "Carretera1"){
                 Coche.tag = "Carretera1";
                 Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
