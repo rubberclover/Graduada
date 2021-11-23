@@ -19,12 +19,18 @@ public class ProtagonistaVida : MonoBehaviour
         }
     }
 
-    public void GainHealth(int value){
-       health += value; 
+    public void GainHealth(){
+        if (corazones.Length > health){ //No puedes darte más vida de la máxima
+            corazones[health].enabled = true; 
+            health++;
+        }
     }
      private void Update() {
         if(Input.GetKeyDown(KeyCode.M)){
         LoseHealth();
+        }
+        if(Input.GetKeyDown(KeyCode.G)){
+        GainHealth();
         }
     }
 }
