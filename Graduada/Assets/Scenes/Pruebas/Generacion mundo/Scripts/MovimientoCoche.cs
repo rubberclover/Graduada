@@ -21,19 +21,19 @@ public class MovimientoCoche : MonoBehaviour
 
         if (gameObject.tag == "Carretera1"){
             gameObject.transform.localPosition = new Vector3(-coord1.x,20,-coord1.z);
-            mov = new Vector3(100 * Time.deltaTime,0,0);
+            mov = new Vector3(130 * Time.deltaTime,0,0);
         }
         else if (gameObject.tag == "Carretera2"){
             gameObject.transform.localPosition = new Vector3(-coord1.x,20,coord1.z);
-            mov = new Vector3(100 * Time.deltaTime,0,0);
+            mov = new Vector3(130 * Time.deltaTime,0,0);
         }
         else if (gameObject.tag == "Carretera3"){
             gameObject.transform.localPosition = new Vector3(coord2.x,20,-coord2.z);
-            mov = new Vector3(0,0, 100 * Time.deltaTime);
+            mov = new Vector3(0,0, 130 * Time.deltaTime);
         }
         else if (gameObject.tag == "Carretera4"){
             gameObject.transform.localPosition = new Vector3(-coord2.x,20,-coord2.z);
-            mov = new Vector3(0,0,100 * Time.deltaTime);
+            mov = new Vector3(0,0,130 * Time.deltaTime);
 
         }
         Invoke("Despawn", 1f);
