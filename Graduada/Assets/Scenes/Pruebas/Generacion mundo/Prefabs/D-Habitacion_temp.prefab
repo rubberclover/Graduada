@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 8788953682815920668}
   - component: {fileID: 7219201580685162}
   - component: {fileID: 7256772810581008477}
-  - component: {fileID: 8263939131242102122}
   m_Layer: 0
   m_Name: Carretera4
   m_TagString: Untagged
@@ -249,18 +248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
   coord: {x: 0, y: 0, z: 0}
---- !u!114 &8263939131242102122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170345717967983516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994a1d6e6018feb4db957dce73db29e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1884345410268210522
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +432,6 @@ GameObject:
   - component: {fileID: 2781148779552269933}
   - component: {fileID: 7626338660480795852}
   - component: {fileID: 2932605646897798671}
-  - component: {fileID: 7124176624492810296}
   m_Layer: 0
   m_Name: Carretera2
   m_TagString: Untagged
@@ -557,18 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
   coord: {x: 0, y: 0, z: 0}
---- !u!114 &7124176624492810296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3416458633760237777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994a1d6e6018feb4db957dce73db29e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3475239032451804441
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +557,6 @@ GameObject:
   - component: {fileID: 2104726194539461269}
   - component: {fileID: 6733224111049026800}
   - component: {fileID: 4231307436317320153}
-  - component: {fileID: 7868054490903903480}
   m_Layer: 0
   m_Name: Carretera3
   m_TagString: Untagged
@@ -599,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475239032451804441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: -0.025001526, z: 0}
+  m_LocalPosition: {x: 30, y: -0.03500153, z: 0}
   m_LocalScale: {x: 1, y: 0.25, z: 5}
   m_Children: []
   m_Father: {fileID: 7653733244388595850}
@@ -695,18 +668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
   coord: {x: 0, y: 0, z: 0}
---- !u!114 &7868054490903903480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3475239032451804441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994a1d6e6018feb4db957dce73db29e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2433638688145612478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -780,8 +741,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8574957, y: 1, z: 0.9110087}
+  m_Center: {x: -0.011310009, y: 0, z: -0.009162405}
 --- !u!114 &4586990588769253524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +831,6 @@ GameObject:
   - component: {fileID: 3008405040796290255}
   - component: {fileID: 1048793694864989032}
   - component: {fileID: 2854868324578353116}
-  - component: {fileID: 1611647030941999072}
   m_Layer: 0
   m_Name: Carretera1
   m_TagString: Untagged
@@ -886,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5767192044547102857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.025001526, z: -30}
+  m_LocalPosition: {x: 0, y: -0.03500153, z: -30}
   m_LocalScale: {x: 7, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 7653733244388595850}
@@ -995,18 +955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coche: {fileID: 6919156170670554131, guid: ed854effb5244834c8eb5e7c8b5a8b7b, type: 3}
   coord: {x: 0, y: 0, z: 0}
---- !u!114 &1611647030941999072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5767192044547102857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994a1d6e6018feb4db957dce73db29e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &89090539004675877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1294,14 +1242,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c599839942b05840a38a522a83071f9, type: 3}
---- !u!4 &760299441662225460 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c599839942b05840a38a522a83071f9, type: 3}
-  m_PrefabInstance: {fileID: 938887466445245407}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128054607862838926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c599839942b05840a38a522a83071f9, type: 3}
+  m_PrefabInstance: {fileID: 938887466445245407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &760299441662225460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c599839942b05840a38a522a83071f9, type: 3}
   m_PrefabInstance: {fileID: 938887466445245407}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1029289654693002313
@@ -1808,16 +1756,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2eec75b872be3944934db41910acc4c, type: 3}
---- !u!4 &5248365295304194507 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2eec75b872be3944934db41910acc4c, type: 3}
-  m_PrefabInstance: {fileID: 5719370387681533472}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4959354467073354820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: e2eec75b872be3944934db41910acc4c, type: 3}
-  m_PrefabInstance: {fileID: 5719370387681533472}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7469758119233575742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2951723070955750686, guid: e2eec75b872be3944934db41910acc4c, type: 3}
@@ -1826,6 +1764,16 @@ GameObject:
 --- !u!1 &3686109603546235110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -254180462864179514, guid: e2eec75b872be3944934db41910acc4c, type: 3}
+  m_PrefabInstance: {fileID: 5719370387681533472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5248365295304194507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2eec75b872be3944934db41910acc4c, type: 3}
+  m_PrefabInstance: {fileID: 5719370387681533472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4959354467073354820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: e2eec75b872be3944934db41910acc4c, type: 3}
   m_PrefabInstance: {fileID: 5719370387681533472}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7148923695034279974
