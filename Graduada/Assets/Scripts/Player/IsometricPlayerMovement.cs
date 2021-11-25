@@ -14,7 +14,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     public float gravity = 40.0f;
 
     private Vector3 moveDirection = Vector3.zero;
-    private Vector3 forward, right;
+    private Vector3 forward, right, point, moveVector;
 
     void Start()
     {
