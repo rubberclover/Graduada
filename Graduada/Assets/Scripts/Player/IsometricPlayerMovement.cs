@@ -5,7 +5,7 @@ using UnityEngine;
 public class IsometricPlayerMovement : MonoBehaviour
 {   
     CharacterController characterController;
-
+    public Vector3 respawnPosition;
     [SerializeField]
     public float speed = 12;
     [SerializeField]
@@ -45,6 +45,17 @@ public class IsometricPlayerMovement : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+    public void respawn(){
+        gameObject.transform.position = respawnPosition;
+    }
+
+    void OnCollisionEnter(Collision otro){
+        Debug.Log("asdasd");
+        if(otro.gameObject.tag == "Carretera1" || otro.gameObject.tag == "Carretera2" || otro.gameObject.tag == "Carretera3" || otro.gameObject.tag == "Carretera4"){
+            Debug.Log("Cuidadooorl");
+            respawn();
+        }
     }
 }
 
