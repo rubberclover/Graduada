@@ -14,6 +14,9 @@ TagManager:
   - Carretera2
   - Carretera3
   - Carretera4
+  - MenuPrincipal
+  - MenuOpcionesPrincipal
+  - MenuControlesPrincipal
   layers:
   - Default
   - TransparentFX

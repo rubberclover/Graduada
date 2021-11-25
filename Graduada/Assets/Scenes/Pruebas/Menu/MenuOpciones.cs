@@ -12,4 +12,16 @@ public class MenuOpciones : MonoBehaviour
     private void Start() {
      EventSystem.current.SetSelectedGameObject(botonControles); 
     }
+    public void ChargeButton(){
+      EventSystem.current.SetSelectedGameObject(botonControles);
+    }
+
+    private void Update() {
+        if(EventSystem.current.currentSelectedGameObject==null){
+        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)
+        || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.W)){
+          EventSystem.current.SetSelectedGameObject(botonControles); 
+        }
+      }
+    }
 }
