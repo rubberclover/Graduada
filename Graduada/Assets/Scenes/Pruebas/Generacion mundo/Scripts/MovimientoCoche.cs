@@ -8,6 +8,7 @@ public class MovimientoCoche : MonoBehaviour
     private Vector3 coord1;
     private Vector3 coord2;
     private Vector3 mov;
+    IsometricPlayerMovement scr;
     void Start()
     {
         if(gameObject.transform.parent.name == "ULR-Inicial"){
@@ -47,5 +48,14 @@ public class MovimientoCoche : MonoBehaviour
     }
     void Despawn(){
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider otro){
+        Debug.Log("asdasd");
+        if(otro.gameObject.tag == "Player"){
+            Debug.Log("asdasd");
+            scr = otro.gameObject.GetComponent<IsometricPlayerMovement>();
+            scr.respawn();
+        }
     }
 }
