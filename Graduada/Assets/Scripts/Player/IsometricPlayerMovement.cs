@@ -47,7 +47,9 @@ public class IsometricPlayerMovement : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
     }
     public void respawn(){
-        gameObject.transform.position = new Vector3(respawnPosition.x, respawnPosition.y + 5, respawnPosition.z);
+        point = new Vector3(respawnPosition.x, respawnPosition.y + 5, respawnPosition.z);
+        moveVector = transform.TransformDirection(point - transform.position);
+        characterController.Move(moveVector);
     }
 
    
