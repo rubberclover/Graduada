@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89b2b7c9f737204e9c79a49b8a5e11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muertos: 0
 --- !u!23 &646216795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1050,6 +1051,10 @@ PrefabInstance:
     - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
       propertyPath: maxHab
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
+      propertyPath: muertos
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
       propertyPath: TopRooms.Array.size
