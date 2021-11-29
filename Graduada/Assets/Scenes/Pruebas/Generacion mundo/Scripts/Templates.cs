@@ -10,5 +10,4 @@ public class Templates : MonoBehaviour
     public GameObject[] RightRooms;
     public int maxHab;
     public static int numHab;
-
 }
