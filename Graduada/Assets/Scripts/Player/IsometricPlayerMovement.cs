@@ -14,7 +14,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     public float gravity = 40.0f;
 
     private Vector3 moveDirection = Vector3.zero;
-    private Vector3 forward, right;
+    private Vector3 forward, right, point, moveVector;
 
     void Start()
     {
@@ -47,18 +47,12 @@ public class IsometricPlayerMovement : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
     }
     public void respawn(){
-        gameObject.transform.position = respawnPosition;
+        point = new Vector3(respawnPosition.x, respawnPosition.y + 5, respawnPosition.z);
+        moveVector = transform.TransformDirection(point - transform.position);
+        characterController.Move(moveVector);
     }
 
-    void OnCollisionEnter(Collision otro){
-        Debug.Log(otro.gameObject.name);
-        Debug.Log(otro.gameObject.tag);
-        Debug.Log("asdasd");
-        if(otro.gameObject.tag == "Carretera1" || otro.gameObject.tag == "Carretera2" || otro.gameObject.tag == "Carretera3" || otro.gameObject.tag == "Carretera4"){
-            Debug.Log("Cuidadooorl");
-            respawn();
-        }
-    }
+   
 }
 
 

@@ -6,10 +6,11 @@ public class CochesGeneral : MonoBehaviour
 {
     public GameObject Coche;
     public  Vector3 coord;
+
+    acciones_Street script;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,27 +19,29 @@ public class CochesGeneral : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider otro){
-       
         // 160,20,120
         if(otro.CompareTag("Player")){
-            if(gameObject.name == "Carretera1"){
+            script = otro.GetComponent<acciones_Street>();
+            bool muertos = script.muertos;
+            //bool muertos = true;
+            if(gameObject.name == "Carretera1" || (gameObject.name == "Paso1" && muertos == false)){
                 Coche.tag = "Carretera1";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
                 
             }
-            else if(gameObject.name == "Carretera2"){
+            else if(gameObject.name == "Carretera2" || (gameObject.name == "Paso2" && muertos == false)){
                 Coche.tag = "Carretera2";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
                 
             }
-            else if(gameObject.name == "Carretera3"){
+            else if(gameObject.name == "Carretera3" || (gameObject.name == "Paso3" && muertos == false)){
                 Coche.tag = "Carretera3";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
                 
             }
-            else if(gameObject.name == "Carretera4"){
+            else if(gameObject.name == "Carretera4" || (gameObject.name == "Paso4" && muertos == false)){
                 Coche.tag = "Carretera4";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
                 
             }
         }

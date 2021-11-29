@@ -8,15 +8,22 @@ public class acciones_Street : MonoBehaviour
     //Player player
     //Array inventario
     ChangeLevelLogic level = new ChangeLevelLogic();
+    //private GameObject inicial;
+    public bool muertos;
     void Start()
     {
-        
+        muertos = false;
     }
 
     void Update()
     {
         if(Input.GetButton("Uber")){
             returnHome();
+        }
+        if(Input.GetKeyDown("t")){
+            
+            muertos = !muertos;
+            Debug.Log(muertos);
         }
     }
 
