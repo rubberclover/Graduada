@@ -7,28 +7,34 @@ public class MenuPausa : MonoBehaviour
 {
     public static bool GameIsPaused= false;
     public GameObject MenuPausaUI;
-    public LogicaCambioNivel cambiar;
+
+    LogicaCambioNivel cambiar = new LogicaCambioNivel();
 
     // Update is called once per frame
-    void Update()
+    private void Start() {
+        MenuPausaUI.SetActive(false);
+    }
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.U)){
+            Debug.Log(GameIsPaused);
             if(GameIsPaused){
                 Resume();
             }
             else{
+                
                 Pause();
             }
         }
     }
 
-    public void Resume(){
+    private void Resume(){
       MenuPausaUI.SetActive(false);
       Time.timeScale = 1f;
       GameIsPaused = false; 
     }
 
-    void Pause(){
+    private void Pause(){
       MenuPausaUI.SetActive(true);
       Time.timeScale = 0f;
       GameIsPaused = true;

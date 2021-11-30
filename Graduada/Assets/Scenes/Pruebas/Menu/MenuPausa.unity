@@ -888,7 +888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuPausaUI: {fileID: 1242815117}
-  cambiar: {fileID: 0}
 --- !u!1 &525473938
 GameObject:
   m_ObjectHideFlags: 0
