@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuPausa : MonoBehaviour
 {
     public static bool GameIsPaused= false;
-    public GameObject MenuPausaUI;
+    public GameObject MenuPausaUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu;
 
     LogicaCambioNivel cambiar = new LogicaCambioNivel();
 
@@ -17,7 +18,6 @@ public class MenuPausa : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.U)){
-            Debug.Log(GameIsPaused);
             if(GameIsPaused){
                 Resume();
             }
@@ -26,16 +26,25 @@ public class MenuPausa : MonoBehaviour
                 Pause();
             }
         }
+        if(GameIsPaused){
+        if(EventSystem.current.currentSelectedGameObject==null){
+        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)
+        || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.W)){
+          EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
+         }
+       }
+     }
     }
 
-    private void Resume(){
+    public void Resume(){
       MenuPausaUI.SetActive(false);
       Time.timeScale = 1f;
       GameIsPaused = false; 
     }
 
-    private void Pause(){
+    public void Pause(){
       MenuPausaUI.SetActive(true);
+      EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
       Time.timeScale = 0f;
       GameIsPaused = true;
     }

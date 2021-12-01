@@ -18,6 +18,7 @@ TagManager:
   - MenuOpcionesPrincipal
   - MenuControlesPrincipal
   - edificioTrans
+  - BotonVolverAJugarPausa
   layers:
   - Default
   - TransparentFX
