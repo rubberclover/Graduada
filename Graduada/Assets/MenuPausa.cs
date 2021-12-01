@@ -17,7 +17,18 @@ public class MenuPausa : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.U)){
+      if(Input.GetKeyDown(KeyCode.X) &&  GameIsPaused){
+       
+       switch(EventSystem.current.currentSelectedGameObject.name){
+         case "VolverAJugar":
+         Resume();
+         break;
+         default :
+         Debug.Log("Tonto");
+         break;
+       }
+      }
+        if(Input.GetKeyDown(KeyCode.Escape)){
             if(GameIsPaused){
                 Resume();
             }

@@ -13,9 +13,12 @@ public class BotonVolverAJugarPausa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.M)){
+            Debug.Log(currentSelected.name);
+        }
        currentSelected = EventSystem.current.currentSelectedGameObject;
  
-         if(currentSelected.name == "BotonVolverAJugarPausa")
+         if(currentSelected.name == "VolverAJugar")
          {
             if(Input.GetKeyDown(KeyCode.Q)){
                 Debug.Log("Gay");
