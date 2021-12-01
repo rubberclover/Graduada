@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5125017510921964293}
   - component: {fileID: 5125017510921964294}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: GenericEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

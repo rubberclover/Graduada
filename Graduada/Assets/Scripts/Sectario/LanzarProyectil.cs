@@ -28,7 +28,7 @@ public class LanzarProyectil : MonoBehaviour
                                                           transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                                  (0, 0, launchVelocity));
-            StartCoroutine(ExecuteAfterTime(2));
+            StartCoroutine(ExecuteAfterTime(2,ball));
 
         }
 
@@ -36,9 +36,10 @@ public class LanzarProyectil : MonoBehaviour
       
     }
 
-    IEnumerator ExecuteAfterTime(float time)
+    IEnumerator ExecuteAfterTime(float time, GameObject ball)
     {
         yield return new WaitForSeconds(time);
+        Destroy(ball);
         shoot = 1;
     }
 
