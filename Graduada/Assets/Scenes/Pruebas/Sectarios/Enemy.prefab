@@ -46,7 +46,7 @@ MonoBehaviour:
   proyectil: {fileID: 5366378180230733608, guid: 4279453b2104c074e9678d6a52386857, type: 3}
   launchVelocity: 1500
   shoot: 1
-  shootingDistance: 10
+  shootingDistance: 12
 --- !u!1 &2677069883521735266
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,3 +229,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 15
+  life: 100
