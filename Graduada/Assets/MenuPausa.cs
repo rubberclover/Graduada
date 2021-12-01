@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class MenuPausa : MonoBehaviour
 {
     public static bool GameIsPaused= false;
-    public GameObject MenuPausaUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu;
+    public GameObject MenuPausaUI, MenuOpcionesUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu;
 
     LogicaCambioNivel cambiar = new LogicaCambioNivel();
 
@@ -23,8 +23,15 @@ public class MenuPausa : MonoBehaviour
          case "VolverAJugar":
          Resume();
          break;
+         case "Volver":
+         LoadMenu();
+         break;
+         case "Inventario":
+         break;
+         case "Opciones":
+
+         break;
          default :
-         Debug.Log("Tonto");
          break;
        }
       }
@@ -33,8 +40,8 @@ public class MenuPausa : MonoBehaviour
                 Resume();
             }
             else{
-                
                 Pause();
+                EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
             }
         }
         if(GameIsPaused){
@@ -52,16 +59,20 @@ public class MenuPausa : MonoBehaviour
       Time.timeScale = 1f;
       GameIsPaused = false; 
     }
+    public void ChargeOpciones(){
+      MenuPausaUI.SetActive(false);
+      MenuOpcionesUI.SetActive(true);
+    }
 
     public void Pause(){
       MenuPausaUI.SetActive(true);
-      EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
       Time.timeScale = 0f;
       GameIsPaused = true;
     }
 
     public void LoadMenu(){
        cambiar.cargarMenuPrincipal();
+       Time.timeScale = 1f;
     }
 
 }
