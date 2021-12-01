@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class MenuPausa : MonoBehaviour
 {
     public static bool GameIsPaused= false;
-    public GameObject MenuPausaUI, MenuOpcionesUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu;
+    public bool GameIsInMenuPause= true;
+    public GameObject MenuPausaUI, MenuOpcionesUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu, cambita;
 
     LogicaCambioNivel cambiar = new LogicaCambioNivel();
+
+    MenuPausaOpciones misOpciones;
 
     // Update is called once per frame
     private void Start() {
@@ -17,7 +21,13 @@ public class MenuPausa : MonoBehaviour
     }
     private void Update()
     {
-      if(Input.GetKeyDown(KeyCode.X) &&  GameIsPaused){
+     if(GameIsPaused && GameIsInMenuPause){
+        if(EventSystem.current.currentSelectedGameObject==null){
+          EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
+       }
+     }
+
+      if(Input.GetKey(KeyCode.X) &&  GameIsPaused && GameIsInMenuPause){
        
        switch(EventSystem.current.currentSelectedGameObject.name){
          case "VolverAJugar":
@@ -29,7 +39,12 @@ public class MenuPausa : MonoBehaviour
          case "Inventario":
          break;
          case "Opciones":
-
+         GameIsInMenuPause = false;
+         MenuOpcionesUI.SetActive(true);
+         MenuPausaUI.SetActive(false);
+         EventSystem.current.SetSelectedGameObject(null);
+         misOpciones=cambita.GetComponent<MenuPausaOpciones>();
+         misOpciones.GameIsInOptions = true;
          break;
          default :
          break;
@@ -41,19 +56,9 @@ public class MenuPausa : MonoBehaviour
             }
             else{
                 Pause();
-                EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
             }
         }
-        if(GameIsPaused){
-        if(EventSystem.current.currentSelectedGameObject==null){
-        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)
-        || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.W)){
-          EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
-         }
-       }
-     }
     }
-
     public void Resume(){
       MenuPausaUI.SetActive(false);
       Time.timeScale = 1f;
@@ -74,5 +79,4 @@ public class MenuPausa : MonoBehaviour
        cambiar.cargarMenuPrincipal();
        Time.timeScale = 1f;
     }
-
 }
