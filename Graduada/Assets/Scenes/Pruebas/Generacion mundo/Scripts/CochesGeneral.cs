@@ -36,12 +36,12 @@ public class CochesGeneral : MonoBehaviour
             }
             else if(gameObject.name == "Carretera3" || (gameObject.name == "Paso3" && muertos == false)){
                 Coche.tag = "Carretera3";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
+                Instantiate(Coche, Vector3.zero,Quaternion.Euler(0.0f, -90.0f, 0.0f), gameObject.transform.parent);
                 
             }
             else if(gameObject.name == "Carretera4" || (gameObject.name == "Paso4" && muertos == false)){
                 Coche.tag = "Carretera4";
-                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
+                Instantiate(Coche, Vector3.zero, Quaternion.Euler(0.0f, -90.0f, 0.0f), gameObject.transform.parent);
                 
             }
         }

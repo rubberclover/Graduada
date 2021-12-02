@@ -9,12 +9,14 @@ public class ProtagonistaVida : MonoBehaviour
     public Image[] corazones;
     public int health;
     GameObject player;
+    AudioSource sonido;
 
     //100 health 
 
 
-    void start()
+    void Start()
     {
+        sonido = GameObject.Find("golpeSectario").GetComponent<AudioSource>();
      
     }
 
@@ -56,7 +58,8 @@ public class ProtagonistaVida : MonoBehaviour
     {
 
         if (collision.gameObject.name == "Proyectil(Clone)"  )
-        {
+        {   
+            sonido.Play();
             Debug.Log("choca");
             LoseHealth();
             Destroy(collision.gameObject);
