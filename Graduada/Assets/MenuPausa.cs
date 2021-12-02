@@ -23,11 +23,11 @@ public class MenuPausa : MonoBehaviour
     {
      if(GameIsPaused && GameIsInMenuPause){
         if(EventSystem.current.currentSelectedGameObject==null){
-          EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
+          StartCoroutine(Esperar());
        }
      }
 
-      if(Input.GetKey(KeyCode.X) &&  GameIsPaused && GameIsInMenuPause){
+      if(Input.GetKey(KeyCode.X) &&  GameIsPaused && GameIsInMenuPause && EventSystem.current.currentSelectedGameObject!=null){
        
        switch(EventSystem.current.currentSelectedGameObject.name){
          case "VolverAJugar":
@@ -51,24 +51,15 @@ public class MenuPausa : MonoBehaviour
        }
       }
         if(Input.GetKeyDown(KeyCode.Escape)){
-            if(GameIsPaused){
-                Resume();
-            }
-            else{
                 Pause();
-            }
         }
     }
     public void Resume(){
       MenuPausaUI.SetActive(false);
       Time.timeScale = 1f;
       GameIsPaused = false; 
+      EventSystem.current.SetSelectedGameObject(null);
     }
-    public void ChargeOpciones(){
-      MenuPausaUI.SetActive(false);
-      MenuOpcionesUI.SetActive(true);
-    }
-
     public void Pause(){
       MenuPausaUI.SetActive(true);
       Time.timeScale = 0f;
@@ -76,7 +67,13 @@ public class MenuPausa : MonoBehaviour
     }
 
     public void LoadMenu(){
+       EventSystem.current.SetSelectedGameObject(null);
        cambiar.cargarMenuPrincipal();
        Time.timeScale = 1f;
     }
+
+    IEnumerator Esperar(){
+        yield return new WaitForSecondsRealtime(0.2f);
+        EventSystem.current.SetSelectedGameObject(botonVolverJuego); 
+  }
 }

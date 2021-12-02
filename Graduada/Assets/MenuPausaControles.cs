@@ -16,10 +16,10 @@ public class MenuPausaControles : MonoBehaviour
     {
         if(GameIsInControles){
         if(EventSystem.current.currentSelectedGameObject==null){
-        EventSystem.current.SetSelectedGameObject(botonVolver); 
+        StartCoroutine(Esperar());
         }
         }
-            if(Input.GetKey(KeyCode.R) && GameIsInControles){
+            if(Input.GetKey(KeyCode.X) && GameIsInControles && EventSystem.current.currentSelectedGameObject!=null){
             switch(EventSystem.current.currentSelectedGameObject.name){
                 case "VolverControles":
                 EventSystem.current.SetSelectedGameObject(null);
@@ -33,5 +33,10 @@ public class MenuPausaControles : MonoBehaviour
                 break;
             }
         }
+    }
+
+    IEnumerator Esperar(){
+        yield return new WaitForSecondsRealtime(0.2f);
+        EventSystem.current.SetSelectedGameObject(botonVolver); 
     }
 }

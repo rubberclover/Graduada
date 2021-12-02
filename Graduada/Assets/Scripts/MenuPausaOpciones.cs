@@ -16,10 +16,10 @@ public class MenuPausaOpciones : MonoBehaviour
     {
         if(GameIsInOptions){
         if(EventSystem.current.currentSelectedGameObject==null){
-            EventSystem.current.SetSelectedGameObject(botonOpciones); 
+            StartCoroutine(Esperar());
             }
         }
-            if(Input.GetKey(KeyCode.T) && GameIsInOptions){
+            if(Input.GetKey(KeyCode.X) && GameIsInOptions && EventSystem.current.currentSelectedGameObject!=null){
             switch(EventSystem.current.currentSelectedGameObject.name){
                 case "VolverOpciones":
                 EventSystem.current.SetSelectedGameObject(null);
@@ -32,15 +32,19 @@ public class MenuPausaOpciones : MonoBehaviour
                 break;
                 case "OpcionesMain":
                 EventSystem.current.SetSelectedGameObject(null);
+                GameIsInOptions = false;
                 MenuControlesUI.SetActive(true);
                 MenuOpcionesUI.SetActive(false);
                 misControles=cambita.GetComponent<MenuPausaControles>();
                 misControles.GameIsInControles = true;
-                GameIsInOptions = false;
                 break;
                 default :
                 break;
             }
         }    
     }
+    IEnumerator Esperar(){
+        yield return new WaitForSecondsRealtime(0.2f);
+        EventSystem.current.SetSelectedGameObject(botonOpciones); 
+  }
 }

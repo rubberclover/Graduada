@@ -2301,10 +2301,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 557579797}
-    m_SelectOnDown: {fileID: 557579797}
-    m_SelectOnLeft: {fileID: 557579797}
-    m_SelectOnRight: {fileID: 557579797}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
@@ -2748,6 +2748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d80ba3e945814299bd8b80d1943ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proyectil: {fileID: 0}
   corazones:
   - {fileID: 27035345}
   - {fileID: 1499806941}
@@ -4257,7 +4258,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194331133}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f74306bd4f51c6a46815df3ee9a09ee2, type: 3}
   m_Name: 
