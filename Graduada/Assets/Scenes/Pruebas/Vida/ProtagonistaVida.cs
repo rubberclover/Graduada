@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ProtagonistaVida : MonoBehaviour
 {
     public GameObject proyectil;
+
+    public GameObject MenuMuerteUI, cambita;
     public Image[] corazones;
     public int health;
     GameObject player;
     AudioSource sonido;
     bool semaforo = true;
+    MenuMuerte muero;
 
     //100 health 
 
@@ -28,7 +32,11 @@ public class ProtagonistaVida : MonoBehaviour
 
         if (health == 0)
         {
-            Debug.Log("You lose");
+            MenuMuerteUI.SetActive(true);
+            Time.timeScale = 0f;
+            EventSystem.current.SetSelectedGameObject(null);
+            muero = cambita.GetComponent<MenuMuerte>();
+            muero.GameDeath = true;
         }
     }
 
