@@ -4274,7 +4274,7 @@ Canvas:
   m_GameObject: {fileID: 1194331133}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1712446915}
   m_PlaneDistance: 0
   m_PixelPerfect: 0
@@ -6391,7 +6391,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
