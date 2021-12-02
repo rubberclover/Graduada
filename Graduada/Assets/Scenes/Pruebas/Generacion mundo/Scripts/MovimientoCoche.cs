@@ -21,19 +21,19 @@ public class MovimientoCoche : MonoBehaviour
         }
 
         if (gameObject.tag == "Carretera1"){
-            gameObject.transform.localPosition = new Vector3(-coord1.x,20,-coord1.z);
+            gameObject.transform.localPosition = new Vector3(-coord1.x,10,-coord1.z);
             mov = new Vector3(130 * Time.deltaTime,0,0);
         }
         else if (gameObject.tag == "Carretera2"){
-            gameObject.transform.localPosition = new Vector3(-coord1.x,20,coord1.z);
+            gameObject.transform.localPosition = new Vector3(-coord1.x,10,coord1.z);
             mov = new Vector3(130 * Time.deltaTime,0,0);
         }
         else if (gameObject.tag == "Carretera3"){
-            gameObject.transform.localPosition = new Vector3(coord2.x,20,-coord2.z);
+            gameObject.transform.localPosition = new Vector3(coord2.x,10,-coord2.z);
             mov = new Vector3(0,0, 130 * Time.deltaTime);
         }
         else if (gameObject.tag == "Carretera4"){
-            gameObject.transform.localPosition = new Vector3(-coord2.x,20,-coord2.z);
+            gameObject.transform.localPosition = new Vector3(-coord2.x,10,-coord2.z);
             mov = new Vector3(0,0,130 * Time.deltaTime);
 
         }
@@ -44,7 +44,7 @@ public class MovimientoCoche : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(mov);
+        transform.Translate(mov, Space.World);
     }
     void Despawn(){
         Destroy(gameObject);
