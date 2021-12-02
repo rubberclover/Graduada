@@ -50,10 +50,8 @@ public class MovimientoCoche : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter(Collider otro){
-        Debug.Log("asdasd");
+    void OnTriggerExit(Collider otro){
         if(otro.gameObject.tag == "Player"){
-            Debug.Log("asdasd");
             scr = otro.gameObject.GetComponent<IsometricPlayerMovement>();
             scr.respawn();
         }

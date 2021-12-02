@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4130463288249837983}
   m_Layer: 0
   m_Name: Coche
-  m_TagString: Carretera4
+  m_TagString: Carretera1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ BoxCollider:
   m_GameObject: {fileID: 659655763185242561}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 4.1524434, y: 1.8414364, z: 2.650282}
   m_Center: {x: -0.16060138, y: -0.076428145, z: -0.035607338}

@@ -10,6 +10,7 @@ public class ProtagonistaVida : MonoBehaviour
     public int health;
     GameObject player;
     AudioSource sonido;
+    bool semaforo = true;
 
     //100 health 
 
@@ -64,5 +65,13 @@ public class ProtagonistaVida : MonoBehaviour
             LoseHealth();
             Destroy(collision.gameObject);
         }
+        
     }
+    // void OnTriggerEnter(Collider collider){
+    //     if (collider.gameObject.name == "Coche(Clone)"  )
+    //     {     
+    //         Debug.Log("Atropellado");
+    //         LoseHealth();            
+    //     }
+    // }
 }

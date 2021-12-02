@@ -12,7 +12,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     public float jumpSpeed = 16.0f;
     [SerializeField]
     public float gravity = 40.0f;
-
+    ProtagonistaVida vida;
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 forward, right, point, moveVector;
 
@@ -47,9 +47,11 @@ public class IsometricPlayerMovement : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
     }
     public void respawn(){
+        vida = gameObject.GetComponent<ProtagonistaVida>();
         point = new Vector3(respawnPosition.x, respawnPosition.y + 5, respawnPosition.z);
         moveVector = transform.TransformDirection(point - transform.position);
         characterController.Move(moveVector);
+        vida.LoseHealth();
     }
 
    
