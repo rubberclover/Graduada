@@ -63,7 +63,7 @@ public class transparencyCamera : MonoBehaviour
 
             if(hit.collider.gameObject.name == "edificio"){
                 transparencyObject tObject = hit.collider.gameObject.GetComponentInParent(typeof(transparencyObject)) as transparencyObject;
-                print(tObject.name);
+                //print(tObject.name);
                 if(!objectsToQuit.Contains(tObject)){
                     objectsToQuit.Add(tObject);
                 }

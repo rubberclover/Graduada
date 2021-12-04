@@ -24,10 +24,15 @@ public class CochesGeneral : MonoBehaviour
             script = otro.GetComponent<acciones_Street>();
             bool muertos = script.muertos;
             //bool muertos = true;
-            if(gameObject.name == "Carretera1" || (gameObject.name == "Paso1" && muertos == false)){
+            if(gameObject.name == "Carretera1"){
                 Coche.tag = "Carretera1";
                 Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
                 
+            }
+            if(gameObject.name == "Paso1" && muertos == false){
+                Debug.Log("asdasdasd");
+                Coche.tag = "Paso1";
+                Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
             }
             else if(gameObject.name == "Carretera2" || (gameObject.name == "Paso2" && muertos == false)){
                 Coche.tag = "Carretera2";

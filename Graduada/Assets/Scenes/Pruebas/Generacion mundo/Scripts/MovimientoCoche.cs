@@ -8,19 +8,23 @@ public class MovimientoCoche : MonoBehaviour
     private Vector3 coord1;
     private Vector3 coord2;
     private Vector3 mov;
+    private bool isColliding;
     IsometricPlayerMovement scr;
     void Start()
     {
-        if(gameObject.transform.parent.name == "ULR-Inicial"){
+        if(gameObject.transform.parent.name == "ULR-Inicial" && gameObject.tag != "Paso1"){
             coord1 = new Vector3(280, 20, 120);
             coord2 = new Vector3(240, 20, 160);
-        }
-        else{
+        }else{
             coord1 = new Vector3(160,20,120);
             coord2 = new Vector3(120,20,160);
         }
 
         if (gameObject.tag == "Carretera1"){
+            gameObject.transform.localPosition = new Vector3(-coord1.x,10,-coord1.z);
+            mov = new Vector3(130 * Time.deltaTime,0,0);
+        }
+        else if(gameObject.tag == "Paso1"){
             gameObject.transform.localPosition = new Vector3(-coord1.x,10,-coord1.z);
             mov = new Vector3(130 * Time.deltaTime,0,0);
         }
@@ -40,7 +44,9 @@ public class MovimientoCoche : MonoBehaviour
         Invoke("Despawn", 1f);
         
     }
-
+    void Update(){
+        isColliding = false;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -50,8 +56,10 @@ public class MovimientoCoche : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerExit(Collider otro){
+    void OnTriggerEnter(Collider otro){
         if(otro.gameObject.tag == "Player"){
+            if(isColliding) return;
+            isColliding = true;
             scr = otro.gameObject.GetComponent<IsometricPlayerMovement>();
             scr.respawn();
         }
