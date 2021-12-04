@@ -77,8 +77,8 @@ GameObject:
   - component: {fileID: 2139189455086251390}
   - component: {fileID: 4667435564181960662}
   - component: {fileID: 3024522454784097850}
-  - component: {fileID: 7672367710789364981}
   - component: {fileID: 33176804871470283}
+  - component: {fileID: 4955343130033990528}
   m_Layer: 0
   m_Name: Paso3
   m_TagString: Untagged
@@ -164,20 +164,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7672367710789364981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212957859903016220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
-  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &33176804871470283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,6 +177,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 13.658683, z: 9.999999}
   m_Center: {x: 0, y: 3.2387347, z: 0}
+--- !u!114 &4955343130033990528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212957859903016220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
+  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &440596297257142710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -379,8 +379,8 @@ GameObject:
   - component: {fileID: 2396438019339951341}
   - component: {fileID: 8691251806814239992}
   - component: {fileID: 8723825597567050258}
-  - component: {fileID: 1919709546978767953}
   - component: {fileID: 937342288406862046}
+  - component: {fileID: 3786140404484987398}
   m_Layer: 0
   m_Name: Paso2
   m_TagString: Untagged
@@ -466,20 +466,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1919709546978767953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628464649237872691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
-  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &937342288406862046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -493,6 +479,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 14.897308, z: 10.000002}
   m_Center: {x: 0, y: 1.6748848, z: 0}
+--- !u!114 &3786140404484987398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628464649237872691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
+  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &3071433057895956691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -846,8 +846,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.592235, y: 36.351807, z: 10}
-  m_Center: {x: 2.2039032, y: 12.066376, z: 0}
+  m_Size: {x: 2.8354921, y: 36.351807, z: 10}
+  m_Center: {x: 3.5822916, y: 12.066376, z: 0}
 --- !u!65 &8155727549130208700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -859,8 +859,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.907932, y: 48.390198, z: 16.136124}
-  m_Center: {x: -3.5460646, y: 19.854248, z: -3.0680618}
+  m_Size: {x: 5.6034613, y: 48.390198, z: 9.717117}
+  m_Center: {x: -2.1983154, y: 19.854248, z: 0.14144135}
 --- !u!114 &3203929921256207616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,8 +1238,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.6867223, y: 85.320145, z: 10}
-  m_Center: {x: -1.2507823, y: 36.8498, z: 0}
+  m_Size: {x: 7.5961447, y: 85.320145, z: 10}
+  m_Center: {x: -1.2960733, y: 36.8498, z: 0}
 --- !u!65 &7466957128191475884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1251,8 +1251,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9802563, y: 96.18695, z: 10}
-  m_Center: {x: 4.5099306, y: 33.125336, z: 0}
+  m_Size: {x: 0.9356655, y: 96.18695, z: 10}
+  m_Center: {x: 4.532228, y: 33.125336, z: 0}
 --- !u!114 &3538275769557923936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,8 +1717,8 @@ GameObject:
   - component: {fileID: 6976908943120885218}
   - component: {fileID: 7720541033654167711}
   - component: {fileID: 5710737485635725571}
-  - component: {fileID: 6091175754650733363}
   - component: {fileID: 6155498257284027009}
+  - component: {fileID: 3810393608764298491}
   m_Layer: 0
   m_Name: Paso1
   m_TagString: Untagged
@@ -1804,20 +1804,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6091175754650733363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6812478325382846822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
-  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &6155498257284027009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1831,6 +1817,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 19.24609, z: 10.000002}
   m_Center: {x: 0, y: 5.773833, z: 0}
+--- !u!114 &3810393608764298491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812478325382846822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
+  coord: {x: 0, y: 0, z: 0}
 --- !u!1 &7295804426205672896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,8 +2044,8 @@ GameObject:
   - component: {fileID: 6958255421570954764}
   - component: {fileID: 556608208808901667}
   - component: {fileID: 2017004014679728972}
-  - component: {fileID: 1093465276598982563}
   - component: {fileID: 8106025641323475970}
+  - component: {fileID: 9022545915984740870}
   m_Layer: 0
   m_Name: Paso4
   m_TagString: Untagged
@@ -2131,20 +2131,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1093465276598982563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8597730888752937754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
-  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &8106025641323475970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2158,6 +2144,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 19.859829, z: 9.999999}
   m_Center: {x: 0, y: 2.8869767, z: 0}
+--- !u!114 &9022545915984740870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8597730888752937754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c49100db660b469e4b19ac812faf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coche: {fileID: 659655763185242561, guid: b0a494654a5cd6e48aa1fbeb6c625712, type: 3}
+  coord: {x: 0, y: 0, z: 0}
 --- !u!65 &2029922862918060472
 BoxCollider:
   m_ObjectHideFlags: 0
