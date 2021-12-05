@@ -16,7 +16,7 @@ GameObject currentSelected;
  
          if(currentSelected.name == "BotonComenzar")
          {
-            if(Input.GetKeyDown(KeyCode.Q)){
+            if(Input.GetKeyDown(KeyCode.Return)){
             PlayGame();
         }
          }

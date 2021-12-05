@@ -23,7 +23,7 @@ public class BotonOpciones : MonoBehaviour
  
          if(currentSelected.name == "BotonOpciones")
          {
-            if(Input.GetKeyDown(KeyCode.Q)){
+            if(Input.GetKeyDown(KeyCode.Return)){
             MenuPrincipal.SetActive(false);
             MenuOpciones.SetActive(true);
             opciones = GameObject.FindGameObjectWithTag("MenuOpcionesPrincipal").GetComponent<MenuOpciones>();

@@ -27,7 +27,7 @@ public class MenuPausa : MonoBehaviour
        }
      }
 
-      if(Input.GetKey(KeyCode.X) &&  GameIsPaused && GameIsInMenuPause && EventSystem.current.currentSelectedGameObject!=null){
+      if(Input.GetKeyDown(KeyCode.Return) &&  GameIsPaused && GameIsInMenuPause && EventSystem.current.currentSelectedGameObject!=null){
        
        switch(EventSystem.current.currentSelectedGameObject.name){
          case "VolverAJugar":

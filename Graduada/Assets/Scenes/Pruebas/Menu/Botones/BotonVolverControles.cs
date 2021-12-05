@@ -23,7 +23,7 @@ public class BotonVolverControles : MonoBehaviour
  
          if(currentSelected.name == "BotonVolver")
          {
-            if(Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)){
+            if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape)){
             MenuOpciones.SetActive(true);
             MenuControles.SetActive(false);
             op = GameObject.FindGameObjectWithTag("MenuOpcionesPrincipal").GetComponent<MenuOpciones>();

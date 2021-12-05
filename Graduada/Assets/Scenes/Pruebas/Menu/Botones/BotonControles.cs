@@ -25,7 +25,7 @@ public class BotonControles : MonoBehaviour
  
          if(currentSelected.name == "BotonControles")
          {
-            if(Input.GetKeyDown(KeyCode.Q)){
+            if(Input.GetKeyDown(KeyCode.Return)){
             MenuOpciones.SetActive(false);
             MenuControles.SetActive(true);
             Control= GameObject.FindGameObjectWithTag("MenuControlesPrincipal").GetComponent<MenuControles>();

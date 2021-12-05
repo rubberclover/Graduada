@@ -19,7 +19,7 @@ public class MenuPausaOpciones : MonoBehaviour
             StartCoroutine(Esperar());
             }
         }
-            if(Input.GetKey(KeyCode.X) && GameIsInOptions && EventSystem.current.currentSelectedGameObject!=null){
+            if(Input.GetKey(KeyCode.Return) && GameIsInOptions && EventSystem.current.currentSelectedGameObject!=null){
             switch(EventSystem.current.currentSelectedGameObject.name){
                 case "VolverOpciones":
                 EventSystem.current.SetSelectedGameObject(null);

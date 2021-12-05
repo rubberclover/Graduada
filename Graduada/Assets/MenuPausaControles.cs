@@ -19,7 +19,7 @@ public class MenuPausaControles : MonoBehaviour
         StartCoroutine(Esperar());
         }
         }
-            if(Input.GetKey(KeyCode.X) && GameIsInControles && EventSystem.current.currentSelectedGameObject!=null){
+            if(Input.GetKey(KeyCode.Return) && GameIsInControles && EventSystem.current.currentSelectedGameObject!=null){
             switch(EventSystem.current.currentSelectedGameObject.name){
                 case "VolverControles":
                 EventSystem.current.SetSelectedGameObject(null);

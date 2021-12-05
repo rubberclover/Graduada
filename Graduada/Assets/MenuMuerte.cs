@@ -23,7 +23,7 @@ public class MenuMuerte : MonoBehaviour
        }
      }
 
-     if(Input.GetKey(KeyCode.X) &&  GameDeath && EventSystem.current.currentSelectedGameObject!=null){
+     if(Input.GetKey(KeyCode.Return) &&  GameDeath && EventSystem.current.currentSelectedGameObject!=null){
        
        switch(EventSystem.current.currentSelectedGameObject.name){
          case "VolverMenu":

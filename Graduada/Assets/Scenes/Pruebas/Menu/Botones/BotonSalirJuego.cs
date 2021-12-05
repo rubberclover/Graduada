@@ -20,7 +20,7 @@ public class BotonSalirJuego : MonoBehaviour
  
          if(currentSelected.name == "BotonSalir")
          {
-            if(Input.GetKeyDown(KeyCode.Q) || Input.GetKey(KeyCode.Escape)){
+            if(Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Escape)){
             Application.Quit();
         }
          } 
