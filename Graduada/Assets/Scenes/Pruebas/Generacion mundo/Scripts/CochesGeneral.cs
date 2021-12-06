@@ -6,6 +6,7 @@ public class CochesGeneral : MonoBehaviour
 {
     public GameObject Coche;
     public  Vector3 coord;
+    bool isColliding;
 
     acciones_Street script;
     // Start is called before the first frame update
@@ -16,7 +17,6 @@ public class CochesGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     void OnTriggerEnter(Collider otro){
         // 160,20,120

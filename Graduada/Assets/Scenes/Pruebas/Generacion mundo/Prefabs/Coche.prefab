@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4130463288249837983}
   m_Layer: 0
   m_Name: Coche
-  m_TagString: Carretera1
+  m_TagString: Paso1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659655763185242561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8504333, y: 0.9665242, z: -17.701992}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 3155445180225065740}
@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5688925, y: 1.8877618, z: 3.262022}
-  m_Center: {x: -0.22907627, y: 0.44388092, z: -0.016852379}
+  m_Size: {x: 4.568893, y: 1.887762, z: 3.8591423}
+  m_Center: {x: -0.22907619, y: 0.44388095, z: -0.015590764}
 --- !u!114 &4130463288249837983
 MonoBehaviour:
   m_ObjectHideFlags: 0
