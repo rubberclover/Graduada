@@ -22,6 +22,7 @@ TagManager:
   - OpcionesMainPausa
   - enemy
   - enemyHitbox
+  - Paso1
   layers:
   - Default
   - TransparentFX
