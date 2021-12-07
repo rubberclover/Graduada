@@ -22,9 +22,10 @@ public class acciones_Street : MonoBehaviour
     void Update()
     {
         if(GameObject.FindGameObjectsWithTag("enemy").Length == 0){
-            print("no quedan enemigos");
+            //print("no quedan enemigos");
             muertos = true;
-        }
+        }else muertos = false;
+        
         if(Input.GetButton("Uber")){
             returnHome();
         }
