@@ -10,12 +10,14 @@ public class EnemyMovement : MonoBehaviour
 
     Transform target;
     NavMeshAgent agent;
+    GameObject jugador;
    
 
     // Start is called before the first frame update
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        jugador = GameObject.FindGameObjectWithTag("Player");
+        target = jugador.transform;
         agent = GetComponent<NavMeshAgent>();
     }
 

@@ -10,6 +10,7 @@ public class Hab_duplicadas : MonoBehaviour
     IsometricPlayerMovement mov;
     GameObject protagonista;
     acciones_Street aS;
+    public GameObject Enemigos;
     bool heEstado;
 
     void Start(){
@@ -28,7 +29,8 @@ public class Hab_duplicadas : MonoBehaviour
             mov.respawnPosition = gameObject.transform.position;
             if(!heEstado){
                 heEstado = true;
-                Instantiate(templates.enemy, mov.respawnPosition, Quaternion.identity);
+                Instantiate(Enemigos, mov.respawnPosition, Quaternion.identity, transform.parent);
+                Enemigos.SetActive(true);
                 Debug.Log("Enemigoooos");
             }
             Debug.Log(mov.respawnPosition);

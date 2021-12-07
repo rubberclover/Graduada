@@ -10,6 +10,7 @@ public class camera : MonoBehaviour
     [Range(0.01f, 1.0f)]
     public float SmoothFactor = 0.5f;
 
+
     
     void Start()
     {

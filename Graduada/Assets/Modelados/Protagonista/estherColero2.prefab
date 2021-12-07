@@ -211,10 +211,10 @@ BoxCollider:
   m_GameObject: {fileID: 6631764932267660276}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 0.8869992, z: 1.0981153}
-  m_Center: {x: 0, y: 0.556504, z: 0.049056496}
+  m_Size: {x: 0.481713, y: 0.6799986, z: 0.39176813}
+  m_Center: {x: 0.0029488462, y: 0.50810975, z: -0.016069055}
 --- !u!143 &5821371736468876990
 CharacterController:
   m_ObjectHideFlags: 0
@@ -226,8 +226,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
+  m_Height: 0.7
+  m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -293,7 +293,7 @@ MeshCollider:
   m_GameObject: {fileID: 6631764932267660276}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

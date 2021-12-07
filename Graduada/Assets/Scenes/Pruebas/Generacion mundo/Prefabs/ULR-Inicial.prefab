@@ -64,6 +64,7 @@ MonoBehaviour:
   - {fileID: 3681573318031861653, guid: b482cc36dd138d64dba8a96d7d64b1ed, type: 3}
   - {fileID: 2703939378620912464, guid: 9f526b685166bd344a15dcf885da1aae, type: 3}
   - {fileID: 5325120262442548639, guid: 66cd78783b9adec49845b6323007b8d6, type: 3}
+  enemy: {fileID: 0}
   maxHab: 10
 --- !u!1 &212957859903016220
 GameObject:
