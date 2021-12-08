@@ -40,7 +40,7 @@ public class LanzarProyectil : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Destroy(ball);
-        //shoot = 1;
+        shoot = 1;
     }
 
     void OnDrawGizmosSelected()
