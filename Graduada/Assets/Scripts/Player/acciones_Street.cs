@@ -14,11 +14,14 @@ public class acciones_Street : MonoBehaviour
 
     private GameObject enemy;
     private vidaEnemigo vidaEnemigo;
+    bool ataque;
+
     void Start()
     {
         muertos = false;
         enemyHitbox = false;
         _animator = gameObject.GetComponent<Animator>();
+        ataque = true;
     }
 
     void Update()
@@ -31,8 +34,9 @@ public class acciones_Street : MonoBehaviour
         if(Input.GetButton("Uber")){
             returnHome();
         }
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && ataque){
             _animator.SetBool("attack", true);
+            ataque = false;
             if(enemyHitbox) attack();
         }
 
@@ -64,6 +68,7 @@ public class acciones_Street : MonoBehaviour
 
     private IEnumerator rutina(){
         yield return new WaitForSeconds(0.2f);
+        ataque = true;
         _animator.SetBool("attack", false);
     }
 
