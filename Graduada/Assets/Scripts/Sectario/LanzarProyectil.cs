@@ -9,17 +9,18 @@ public class LanzarProyectil : MonoBehaviour
     public int shoot = 1;
     public float shootingDistance = 10f;
 
-    Transform target;
+    GameObject target;
     // Start is called before the first frame update
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
+        float distance = Vector3.Distance(target.transform.position, transform.position);
+        Debug.Log(gameObject.name +" "+ distance);
 
         if (shoot == 1 && distance <= shootingDistance)
         {
