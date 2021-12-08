@@ -13,7 +13,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     [SerializeField]
     public float gravity = 40.0f;
     ProtagonistaVida vida;
-    private Vector3 moveDirection = Vector3.zero;
+    private Vector3 moveDirection = Vector3.zero, aux;
     private Vector3 forward, right, point, moveVector;
     private Animator _animator;
 
@@ -33,27 +33,37 @@ public class IsometricPlayerMovement : MonoBehaviour
         {
             Vector3 rightMovement = right * speed * Time.deltaTime * Input.GetAxis("HorizontalStreet");
             Vector3 upMovement = forward * speed * Time.deltaTime * Input.GetAxis("VerticalStreet");
- 
 
+            aux = Vector3.Normalize(rightMovement + upMovement);
             moveDirection = Vector3.Normalize(rightMovement + upMovement);
             moveDirection *= speed;
 
             if (Input.GetButton("Jump"))
             {
                 _animator.SetBool("jumping", true);
-                if(_animator.GetCurrentAnimatorStateInfo(0).IsName("jump")){
-                    Debug.Log("salto");
-                }
                 moveDirection.y = jumpSpeed;
             }
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
-        _animator.SetBool("jumping", false);
 
-        _animator.SetFloat("speed", 0.2f);
+
+
         characterController.Move(moveDirection * Time.deltaTime);
-        _animator.SetFloat("speed", 0f);
+
+        if(aux != Vector3.zero){
+        transform.rotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z));
+        }
+        
+        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("jump")){
+            StartCoroutine(rutina());
+        }
+
+    }
+
+    private IEnumerator rutina(){
+        yield return new WaitForSeconds(0.1f);
+        _animator.SetBool("jumping", false);
     }
     public void respawn(){
         vida = gameObject.GetComponent<ProtagonistaVida>();

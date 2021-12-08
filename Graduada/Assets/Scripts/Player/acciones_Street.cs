@@ -31,9 +31,15 @@ public class acciones_Street : MonoBehaviour
         if(Input.GetButton("Uber")){
             returnHome();
         }
-        if(Input.GetMouseButtonDown(0) && enemyHitbox){
-            attack();
+        if(Input.GetMouseButtonDown(0)){
+            _animator.SetBool("attack", true);
+            if(enemyHitbox) attack();
         }
+
+        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("atacando")){
+            StartCoroutine(rutina());
+        }
+
     }
 
     void OnTriggerEnter(Collider col){
@@ -51,14 +57,11 @@ public class acciones_Street : MonoBehaviour
     }
 
     private void attack(){
-        _animator.SetBool("attack", true);
-        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("attack")){
-            Debug.Log("atacando");
-        }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("parado")){
-            Debug.Log("no ataco");
-        }
         vidaEnemigo.LoseHealth();
+    }
+
+    private IEnumerator rutina(){
+        yield return new WaitForSeconds(0.2f);
         _animator.SetBool("attack", false);
     }
 
@@ -70,4 +73,5 @@ public class acciones_Street : MonoBehaviour
         level.start();
 
     }
+    
 }
