@@ -37,6 +37,9 @@ public class IsometricPlayerMovement : MonoBehaviour
             aux = Vector3.Normalize(rightMovement + upMovement);
             moveDirection = Vector3.Normalize(rightMovement + upMovement);
             moveDirection *= speed;
+            
+            if(moveDirection != Vector3.zero){ _animator.SetBool("moving", true);}
+            else{ _animator.SetBool("moving", false);}
 
             if (Input.GetButton("Jump"))
             {
@@ -54,14 +57,14 @@ public class IsometricPlayerMovement : MonoBehaviour
         if(aux != Vector3.zero){
         transform.rotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z));
         }
-        
+
         if(_animator.GetCurrentAnimatorStateInfo(0).IsName("jump")){
-            StartCoroutine(rutina());
+            StartCoroutine(rutinaSalto());
         }
 
     }
 
-    private IEnumerator rutina(){
+    private IEnumerator rutinaSalto(){
         yield return new WaitForSeconds(0.1f);
         _animator.SetBool("jumping", false);
     }
