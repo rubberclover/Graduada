@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
     {
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
         maxHab = templates.maxHab;
-        Invoke("Spawn", 1.0f);
+        Invoke("Spawn", 0.5f);
     }
     void Spawn()
     {
