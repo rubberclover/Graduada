@@ -10,6 +10,7 @@ public class acciones_Street : MonoBehaviour
     ChangeLevelLogic level = new ChangeLevelLogic();
     //private GameObject inicial;
     public bool muertos, enemyHitbox;
+    private Animator _animator;
 
     private GameObject enemy;
     private vidaEnemigo vidaEnemigo;
@@ -17,6 +18,7 @@ public class acciones_Street : MonoBehaviour
     {
         muertos = false;
         enemyHitbox = false;
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -50,8 +52,9 @@ public class acciones_Street : MonoBehaviour
     }
 
     private void attack(){
-        //animación
+        _animator.SetBool("attack", true);
         vidaEnemigo.LoseHealth();
+        _animator.SetBool("attack", false);
     }
 
     private void returnHome(){

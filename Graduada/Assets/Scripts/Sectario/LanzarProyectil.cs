@@ -20,7 +20,6 @@ public class LanzarProyectil : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.transform.position, transform.position);
-        Debug.Log(gameObject.name +" "+ distance);
 
         if (shoot == 1 && distance <= shootingDistance)
         {

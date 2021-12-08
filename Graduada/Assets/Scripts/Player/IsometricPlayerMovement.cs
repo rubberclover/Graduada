@@ -15,10 +15,12 @@ public class IsometricPlayerMovement : MonoBehaviour
     ProtagonistaVida vida;
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 forward, right, point, moveVector;
+    private Animator _animator;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        _animator = gameObject.GetComponent<Animator>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -38,13 +40,17 @@ public class IsometricPlayerMovement : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
+                _animator.SetBool("jumping", true);
                 moveDirection.y = jumpSpeed;
             }
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
+        _animator.SetBool("jumping", false);
 
+        _animator.SetFloat("speed", 0.2f);
         characterController.Move(moveDirection * Time.deltaTime);
+        _animator.SetFloat("speed", 0f);
     }
     public void respawn(){
         vida = gameObject.GetComponent<ProtagonistaVida>();
