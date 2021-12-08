@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfae8465da467434bb79cc13451900c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 20
   life: 100
 --- !u!114 &3518030181810280728
 MonoBehaviour:
@@ -303,6 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proyectil: {fileID: 5366378180230733608, guid: 4279453b2104c074e9678d6a52386857, type: 3}
-  launchVelocity: 700
+  launchVelocity: 900
   shoot: 1
-  shootingDistance: 5
+  shootingDistance: 10
