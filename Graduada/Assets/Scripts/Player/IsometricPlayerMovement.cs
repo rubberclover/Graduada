@@ -37,7 +37,7 @@ public class IsometricPlayerMovement : MonoBehaviour
             aux = Vector3.Normalize(rightMovement + upMovement);
             moveDirection = Vector3.Normalize(rightMovement + upMovement);
             moveDirection *= speed;
-            
+
             if(moveDirection != Vector3.zero){ _animator.SetBool("moving", true);}
             else{ _animator.SetBool("moving", false);}
 
@@ -72,7 +72,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         vida = gameObject.GetComponent<ProtagonistaVida>();
         point = new Vector3(respawnPosition.x, respawnPosition.y + 5, respawnPosition.z);
         moveVector = transform.TransformDirection(point - transform.position);
-        characterController.Move(moveVector);
+        characterController.Move(point-transform.position);
         vida.LoseHealth();
     }
 

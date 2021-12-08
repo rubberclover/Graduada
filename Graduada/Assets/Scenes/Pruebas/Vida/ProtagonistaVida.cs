@@ -15,6 +15,7 @@ public class ProtagonistaVida : MonoBehaviour
     AudioSource sonido;
     bool semaforo = true;
     MenuMuerte muero;
+    bool pierdo;
 
     //100 health 
 
@@ -22,13 +23,20 @@ public class ProtagonistaVida : MonoBehaviour
     void Start()
     {
         sonido = GameObject.Find("golpeSectario").GetComponent<AudioSource>();
-     
+        pierdo = true;
     }
 
+    private IEnumerator invencibilidad(){
+        yield return new WaitForSeconds(1);
+        pierdo = true;
+    }
     public void LoseHealth()
     {
-        health--;
-        corazones[health].enabled = false;
+        if(pierdo){
+            pierdo = false;
+            health--;
+            corazones[health].enabled = false;
+        }
 
         if (health == 0)
         {
@@ -50,7 +58,7 @@ public class ProtagonistaVida : MonoBehaviour
     }
     private void Update()
     {
-
+        if(!pierdo) StartCoroutine(invencibilidad());
 
 
         if (Input.GetKeyDown(KeyCode.M))
@@ -75,11 +83,4 @@ public class ProtagonistaVida : MonoBehaviour
         }
         
     }
-    // void OnTriggerEnter(Collider collider){
-    //     if (collider.gameObject.name == "Coche(Clone)"  )
-    //     {     
-    //         Debug.Log("Atropellado");
-    //         LoseHealth();            
-    //     }
-    // }
 }

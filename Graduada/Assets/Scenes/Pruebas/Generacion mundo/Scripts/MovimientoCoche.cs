@@ -45,7 +45,7 @@ public class MovimientoCoche : MonoBehaviour
         
     }
     void Update(){
-        isColliding = false;
+        if(isColliding) StartCoroutine(rutinaAtropellos());
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -55,12 +55,16 @@ public class MovimientoCoche : MonoBehaviour
     void Despawn(){
         Destroy(gameObject);
     }
-
+    private IEnumerator rutinaAtropellos(){
+        yield return new WaitForSeconds(1);
+        isColliding = false;
+    }
     void OnTriggerEnter(Collider otro){
         if(otro.gameObject.tag == "Player"){
             if(isColliding) return;
             isColliding = true;
             scr = otro.gameObject.GetComponent<IsometricPlayerMovement>();
+            Debug.Log("Atropellao");
             scr.respawn();
         }
     }

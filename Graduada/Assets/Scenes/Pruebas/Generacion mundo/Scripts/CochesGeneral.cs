@@ -6,7 +6,6 @@ public class CochesGeneral : MonoBehaviour
 {
     public GameObject Coche;
     public  Vector3 coord;
-    bool isColliding;
 
     acciones_Street script;
     // Start is called before the first frame update
@@ -30,7 +29,6 @@ public class CochesGeneral : MonoBehaviour
                 
             }
             if(gameObject.name == "Paso1" && muertos == false){
-                Debug.Log("asdasdasd");
                 Coche.tag = "Paso1";
                 Instantiate(Coche, Vector3.zero, Quaternion.identity, gameObject.transform.parent);
             }
