@@ -18,7 +18,7 @@ public class acciones_Street : MonoBehaviour
     {
         muertos = false;
         enemyHitbox = false;
-        _animator = GetComponent<Animator>();
+        _animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -37,7 +37,6 @@ public class acciones_Street : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col){
-        print("le puedes dar");
         if(col.CompareTag("enemyHitbox")){
             enemy = col.gameObject.transform.parent.gameObject;
             vidaEnemigo = enemy.GetComponent<vidaEnemigo>();
@@ -53,6 +52,12 @@ public class acciones_Street : MonoBehaviour
 
     private void attack(){
         _animator.SetBool("attack", true);
+        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("attack")){
+            Debug.Log("atacando");
+        }
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("parado")){
+            Debug.Log("no ataco");
+        }
         vidaEnemigo.LoseHealth();
         _animator.SetBool("attack", false);
     }

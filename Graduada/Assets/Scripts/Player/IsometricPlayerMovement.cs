@@ -41,6 +41,9 @@ public class IsometricPlayerMovement : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 _animator.SetBool("jumping", true);
+                if(_animator.GetCurrentAnimatorStateInfo(0).IsName("jump")){
+                    Debug.Log("salto");
+                }
                 moveDirection.y = jumpSpeed;
             }
         }

@@ -8322,6 +8322,10 @@ PrefabInstance:
       propertyPath: corazones.Array.data[3]
       value: 
       objectReference: {fileID: 27035345}
+    - target: {fileID: 6087922789584881862, guid: c0f78c71fd1be4246bb49248e01f9e48, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6287891207863699790, guid: c0f78c71fd1be4246bb49248e01f9e48, type: 3}
       propertyPath: m_RootOrder
       value: 14

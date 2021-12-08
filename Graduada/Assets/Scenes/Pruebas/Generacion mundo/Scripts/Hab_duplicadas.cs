@@ -20,21 +20,17 @@ public class Hab_duplicadas : MonoBehaviour
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
     }
     void OnTriggerEnter(Collider otro){
-        Debug.Log("he colisionao");
         if(otro.CompareTag("Colision")){
             Destroy(gameObject);
         }
         else if(otro.CompareTag("Player")){
-            Debug.Log("Personaje esta aqui");
             mov = otro.GetComponent<IsometricPlayerMovement>();
             mov.respawnPosition = gameObject.transform.position;
             if(!heEstado){
                 heEstado = true;
                 Instantiate(Enemigos, mov.respawnPosition, Quaternion.identity, transform.parent);
                 Enemigos.SetActive(true);
-                Debug.Log("Enemigoooos");
             }
-            Debug.Log(mov.respawnPosition);
         }
     }
     void Update(){
