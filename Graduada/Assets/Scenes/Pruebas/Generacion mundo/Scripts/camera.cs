@@ -14,6 +14,7 @@ public class camera : MonoBehaviour
     
     void Start()
     {
+        //transform.position = new Vector3(-2f, 10f, 12.8f);
         _cameraOffset = transform.position - PlayerTransform.position;
     }
 

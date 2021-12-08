@@ -5,9 +5,9 @@ using UnityEngine;
 public class LanzarProyectil : MonoBehaviour
 {
     public GameObject proyectil;
-    public float launchVelocity = 700f;
+    public float launchVelocity = 900f;
     public int shoot = 1;
-    public float shootingDistance = 5f;
+    public float shootingDistance = 10f;
 
     Transform target;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class LanzarProyectil : MonoBehaviour
                                                           transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                                  (0, 0, launchVelocity));
-            StartCoroutine(ExecuteAfterTime(2,ball));
+            StartCoroutine(ExecuteAfterTime(1,ball));
 
         }
 

@@ -20,6 +20,7 @@ public class Hab_duplicadas : MonoBehaviour
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
     }
     void OnTriggerEnter(Collider otro){
+        Debug.Log("he colisionao");
         if(otro.CompareTag("Colision")){
             Destroy(gameObject);
         }

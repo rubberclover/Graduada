@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float lookRadius = 10f;
+    public float lookRadius = 20f;
     public float life = 100.00f;
 
     Transform target;

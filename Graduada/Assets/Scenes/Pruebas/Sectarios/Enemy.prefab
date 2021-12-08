@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 8289482398575584559}
   - component: {fileID: 8289482398575584556}
   - component: {fileID: 3518030181810280728}
-  - component: {fileID: 6209607033697324985}
+  - component: {fileID: 9182956580513739991}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: enemy
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
---- !u!114 &6209607033697324985
+--- !u!114 &9182956580513739991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +299,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8289482398575584557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a61169755eab804b8bc3e520d2213d9, type: 3}
+  m_Script: {fileID: 11500000, guid: fe338dd7d9ecb3640bc6a1ea9e204b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  proyectil: {fileID: 5366378180230733608, guid: 4279453b2104c074e9678d6a52386857, type: 3}
+  launchVelocity: 700
+  shoot: 1
+  shootingDistance: 5
