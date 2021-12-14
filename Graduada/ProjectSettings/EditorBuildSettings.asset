@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas/Generacion mundo/Nivel_1.unity
     guid: e6aac94f30046ac428a6cdf8fb2ae753
+  - enabled: 1
+    path: Assets/Scenes/Pruebas/Creditos.unity
+    guid: dc15af75f4eef23429fbb56d3854ef43
   m_configObjects: {}
