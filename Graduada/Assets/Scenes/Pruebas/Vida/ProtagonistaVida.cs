@@ -16,6 +16,8 @@ public class ProtagonistaVida : MonoBehaviour
     bool semaforo = true;
     MenuMuerte muero;
     bool pierdo;
+    Vector3 mouse, direction;
+    Ray castPoint;
 
     //100 health 
 
@@ -67,6 +69,11 @@ public class ProtagonistaVida : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
+            mouse = Input.mousePosition;
+            castPoint = Camera.main.ScreenPointToRay(mouse);
+            direction = (castPoint.direction - transform.position).normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 500000f);
+            Debug.Log(direction);
             GainHealth();
         }
     }

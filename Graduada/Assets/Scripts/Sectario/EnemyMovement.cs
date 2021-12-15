@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
     GameObject jugador;
+    private Animator _animator;
    
 
     // Start is called before the first frame update
@@ -19,15 +20,21 @@ public class EnemyMovement : MonoBehaviour
         jugador = GameObject.FindGameObjectWithTag("Player");
         target = jugador.transform;
         agent = GetComponent<NavMeshAgent>();
+        _animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-
+        //_animator.SetBool("moving", false);
         if (distance <= lookRadius)
         {
+            _animator.SetBool("Detectado", true);
+            Debug.Log("Voy a correr");
+            if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Correr")){
+                Debug.Log("Corro");
+            }
             agent.SetDestination(target.position);
         }
 

@@ -48,7 +48,6 @@ public class acciones_Street : MonoBehaviour
 
     void OnTriggerStay(Collider col){
         if(col.CompareTag("enemyHitbox")){
-            Debug.Log("Angulo: " + Vector3.Angle(transform.forward, col.transform.position - transform.position));
             if(Vector3.Angle(transform.forward, col.transform.position - transform.position) < 90){
                 enemy = col.gameObject.transform.parent.gameObject;
                 vidaEnemigo = enemy.GetComponent<vidaEnemigo>();

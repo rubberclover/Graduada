@@ -1,37 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class vidaEnemigo : MonoBehaviour
 {
     public int health = 4;
     AudioSource sonido;
     // Start is called before the first frame update
+    Animator _animator;
+    public bool muerto = false;
     void Start()
     {
         sonido = GameObject.Find("golpeAlSectario").GetComponent<AudioSource>();
+        _animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Dano")){
+            StartCoroutine(rutina());
+        }
     }
 
     public void LoseHealth(acciones_Street street)
     {
         print("AAAAAAAAA");
+        _animator.SetBool("Hit", true);
         sonido.Play();
         health--;
         //animacion?
 
-        if (health == 0)
+        if (health <= 0)
         {
+            _animator.SetBool("Muerto", true);
+            muerto = true;
+            gameObject.GetComponent<NavMeshAgent>().speed = 0;
             street.EnemyKO();
             Drop();
+            StartCoroutine(muerte());
             //animacion muerte
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
+    }
+
+    private IEnumerator muerte(){
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
+    }
+    private IEnumerator rutina(){
+        yield return new WaitForSeconds(0.2f);
+        _animator.SetBool("Hit", false);
+
     }
 
     public void Drop(){
