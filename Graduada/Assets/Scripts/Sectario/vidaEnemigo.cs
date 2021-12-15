@@ -18,7 +18,7 @@ public class vidaEnemigo : MonoBehaviour
         
     }
 
-    public void LoseHealth()
+    public void LoseHealth(acciones_Street street)
     {
         print("AAAAAAAAA");
         sonido.Play();
@@ -27,9 +27,10 @@ public class vidaEnemigo : MonoBehaviour
 
         if (health == 0)
         {
+            street.EnemyKO();
             Drop();
             //animacion muerte
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 

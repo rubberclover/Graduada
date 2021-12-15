@@ -63,7 +63,12 @@ public class acciones_Street : MonoBehaviour
     }
 
     private void attack(){
-        vidaEnemigo.LoseHealth();
+        vidaEnemigo.LoseHealth(this);
+    }
+
+    public void EnemyKO(){
+       print("MUERTISIMO CHAVAL");
+       enemyHitbox = false;
     }
 
     private IEnumerator rutina(){
