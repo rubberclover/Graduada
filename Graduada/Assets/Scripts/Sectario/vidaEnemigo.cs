@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class vidaEnemigo : MonoBehaviour
 {
-    public int health = 4;
+    private int health = 2;
     AudioSource sonido;
     // Start is called before the first frame update
     Animator _animator;
@@ -27,7 +27,6 @@ public class vidaEnemigo : MonoBehaviour
     public void LoseHealth(acciones_Street street)
     {
         print("AAAAAAAAA");
-        _animator.SetBool("Hit", true);
         sonido.Play();
         health--;
         //animacion?
@@ -43,6 +42,7 @@ public class vidaEnemigo : MonoBehaviour
             //animacion muerte
             //Destroy(gameObject);
         }
+        _animator.SetBool("Hit", true);
     }
 
     private IEnumerator muerte(){

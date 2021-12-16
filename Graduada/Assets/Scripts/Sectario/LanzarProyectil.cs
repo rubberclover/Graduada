@@ -5,7 +5,7 @@ using UnityEngine;
 public class LanzarProyectil : MonoBehaviour
 {
     public GameObject proyectil;
-    private float launchVelocity = 1000f;
+    private float launchVelocity = 1200f;  //1000f
     private int shoot = 0;
     private float shootingDistance = 20f;
     private GameObject ball;

@@ -1009,7 +1009,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97b5a8bf817700e4fafb76867b51cc2a, type: 2}
+  - {fileID: 2100000, guid: f51f5127d66d1544e9e5086ed9242635, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1927,6 +1927,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8628209273130667082}
     m_Modifications:
+    - target: {fileID: -9003323146575883303, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
     - target: {fileID: -8679921383154817045, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2011,13 +2015,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio
       objectReference: {fileID: 0}
+    - target: {fileID: -2268138116939433651, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
+    - target: {fileID: -241587437493983680, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
+    - target: {fileID: 50754954277266222, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Name
       value: muroyvalla
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2380718651202138832, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2200,7 +2216,7 @@ PrefabInstance:
     - target: {fileID: -9003323146575883303, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
+      objectReference: {fileID: 2100000, guid: f51f5127d66d1544e9e5086ed9242635, type: 2}
     - target: {fileID: -8679921383154817045, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2300,7 +2316,7 @@ PrefabInstance:
     - target: {fileID: -2268138116939433651, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
+      objectReference: {fileID: 2100000, guid: f51f5127d66d1544e9e5086ed9242635, type: 2}
     - target: {fileID: -601018869012299972, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_LocalScale.x
       value: 93.3106
@@ -2332,10 +2348,14 @@ PrefabInstance:
     - target: {fileID: -241587437493983680, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0de017999b828484a848306486402f3b, type: 2}
+      objectReference: {fileID: 2100000, guid: f51f5127d66d1544e9e5086ed9242635, type: 2}
     - target: {fileID: 919132149155446097, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Name
       value: muroyvalla T
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2380718651202138832, guid: fe37a13355f49994ab0fef07de5703ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
