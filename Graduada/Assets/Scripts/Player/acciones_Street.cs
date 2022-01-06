@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class acciones_Street : MonoBehaviour
 {
-
+    //inventario
+    public GameObject MenuInventario;
+    public bool inventario;
     //Player player
     //Array inventario
     ChangeLevelLogic level = new ChangeLevelLogic();
     //private GameObject inicial;
-    public bool muertos, enemyHitbox;
+    public bool muertos, enemyHitbox; 
+    public bool pick;
     private Animator _animator;
 
     private GameObject enemy;
+    private GameObject item;
+    private ItemObject itemobject;
     private vidaEnemigo vidaEnemigo;
     bool ataque;
 
     void Start()
     {
+        //inventario
+        MenuInventario.SetActive(false);
+        inventario = false;
+
         muertos = false;
         enemyHitbox = false;
+        pick = false;
         _animator = gameObject.GetComponent<Animator>();
         ataque = true;
     }
@@ -44,6 +54,23 @@ public class acciones_Street : MonoBehaviour
             StartCoroutine(rutina());
         }
 
+        if(Input.GetButton("interact")){
+            if(pick) pickup();
+        }
+        //menu inventario
+        if(Input.GetButton("inventario")){
+            if(inventario){
+                inventario = false;
+                MenuInventario.SetActive(false);
+            } 
+            else{
+                inventario = true;
+                MenuInventario.SetActive(true);
+            } 
+            
+        }
+
+
     }
 
     void OnTriggerStay(Collider col){
@@ -54,10 +81,21 @@ public class acciones_Street : MonoBehaviour
                 enemyHitbox = true;
             }
         }
+        if(col.CompareTag("object")){
+            pick = true;
+            item = col.gameObject;
+            itemobject = item.GetComponent<ItemObject>();
+
+            print("OBJETO A LA VISTA" + item);
+        }
     }
     void OnTriggerExit(Collider col){
         if(col.CompareTag("enemyHitbox")){
             enemyHitbox = false;
+        }
+
+        if(col.CompareTag("object")){
+            pick = false;
         }
     }
 
@@ -74,6 +112,13 @@ public class acciones_Street : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         ataque = true;
         _animator.SetBool("attack", false);
+    }
+
+    private void pickup(){
+        pick = false;
+        print("RECOGES UN OBJETO");
+        itemobject.OnHandlePickupItem();
+
     }
 
     private void returnHome(){
