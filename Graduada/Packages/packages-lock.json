@@ -90,9 +90,9 @@
       }
     },
     "dev.yarnspinner.unity": {
-      "version": "file:D:/Descargas/YarnSpinner-Unity-2.0.1",
+      "version": "file:YarnSpinner-Unity-2.0.1",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "1.4.1"
       }
