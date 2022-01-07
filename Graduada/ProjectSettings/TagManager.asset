@@ -23,6 +23,7 @@ TagManager:
   - enemy
   - enemyHitbox
   - Paso1
+  - object
   layers:
   - Default
   - TransparentFX

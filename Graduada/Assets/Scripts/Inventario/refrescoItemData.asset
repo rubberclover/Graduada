@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc362248e2a0d646b30f3d0b1487c2c, type: 3}
+  m_Name: refrescoItemData
+  m_EditorClassIdentifier: 
+  id: 2
+  displayName: Refresco
+  icon: {fileID: 21300000, guid: a1095f5fa89a68046aafcd899f222fb0, type: 3}
+  prefab: {fileID: 8187164788685384885, guid: d306bfcaf9a3fb842bf807c0df582917, type: 3}
