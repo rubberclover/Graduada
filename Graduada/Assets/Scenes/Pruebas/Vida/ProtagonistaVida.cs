@@ -8,6 +8,8 @@ public class ProtagonistaVida : MonoBehaviour
 {
     public GameObject proyectil;
 
+    public GameObject persistentDataManager;
+
     public GameObject MenuMuerteUI, cambita;
     public Image[] corazones;
     public int health;
@@ -24,6 +26,7 @@ public class ProtagonistaVida : MonoBehaviour
 
     void Start()
     {
+        persistentDataManager = GameObject.FindGameObjectWithTag("persistent");
         sonido = GameObject.Find("golpeSectario").GetComponent<AudioSource>();
         pierdo = true;
     }
@@ -42,6 +45,7 @@ public class ProtagonistaVida : MonoBehaviour
 
         if (health == 0)
         {
+            persistentDataManager.GetComponent<PersistentData>().returnWithDeath();
             MenuMuerteUI.SetActive(true);
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(null);

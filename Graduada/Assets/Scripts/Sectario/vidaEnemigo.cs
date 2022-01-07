@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class vidaEnemigo : MonoBehaviour
 {
+    //sistema dropeo
+    public GameObject dropSystem;
     private int health = 2;
     AudioSource sonido;
     // Start is called before the first frame update
@@ -12,6 +14,7 @@ public class vidaEnemigo : MonoBehaviour
     public bool muerto = false;
     void Start()
     {
+        dropSystem = GameObject.FindGameObjectWithTag("inventario");
         sonido = GameObject.Find("golpeAlSectario").GetComponent<AudioSource>();
         _animator = gameObject.GetComponent<Animator>();
     }
@@ -31,7 +34,7 @@ public class vidaEnemigo : MonoBehaviour
         health--;
         //animacion?
 
-        if (health <= 0)
+        if (health == 0)
         {
             _animator.SetBool("Muerto", true);
             muerto = true;
@@ -56,6 +59,6 @@ public class vidaEnemigo : MonoBehaviour
     }
 
     public void Drop(){
-        print("Objeto Dropeado");
+        dropSystem.GetComponent<Drops>().Drop(transform.position);
     }
 }

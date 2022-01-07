@@ -9,7 +9,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField]
     public static InventorySystem current;
     [SerializeField]
-    private Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
+    public Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
     [SerializeField]
     public List<InventoryItem> inventory;
 

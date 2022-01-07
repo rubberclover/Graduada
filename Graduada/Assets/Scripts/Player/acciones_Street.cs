@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class acciones_Street : MonoBehaviour
 {
-    //inventario
-    public GameObject MenuInventario;
-    public bool inventario;
+
     //Player player
-    //Array inventario
+    public GameObject persistentDataManager;
+
     ChangeLevelLogic level = new ChangeLevelLogic();
     //private GameObject inicial;
     public bool muertos, enemyHitbox; 
@@ -23,10 +22,7 @@ public class acciones_Street : MonoBehaviour
 
     void Start()
     {
-        //inventario
-        MenuInventario.SetActive(false);
-        inventario = false;
-
+        persistentDataManager = GameObject.FindGameObjectWithTag("persistent");
         muertos = false;
         enemyHitbox = false;
         pick = false;
@@ -42,7 +38,7 @@ public class acciones_Street : MonoBehaviour
         }else muertos = false;
         
         if(Input.GetButton("Uber")){
-            returnHome();
+            Uber();
         }
         if(Input.GetMouseButtonDown(0) && ataque){
             _animator.SetBool("attack", true);
@@ -57,20 +53,6 @@ public class acciones_Street : MonoBehaviour
         if(Input.GetButton("interact")){
             if(pick) pickup();
         }
-        //menu inventario
-        if(Input.GetButton("inventario")){
-            if(inventario){
-                inventario = false;
-                MenuInventario.SetActive(false);
-            } 
-            else{
-                inventario = true;
-                MenuInventario.SetActive(true);
-            } 
-            
-        }
-
-
     }
 
     void OnTriggerStay(Collider col){
@@ -128,6 +110,11 @@ public class acciones_Street : MonoBehaviour
         // ¿Enviar el inventario a el inventario del piso ?
         level.start();
 
+    }
+
+    private void Uber(){
+        persistentDataManager.GetComponent<PersistentData>().returnWithUber();
+        level.start();
     }
     
 }
