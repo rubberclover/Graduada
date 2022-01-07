@@ -9,11 +9,13 @@ public class MenuPausa : MonoBehaviour
 {
     public static bool GameIsPaused= false;
     public bool GameIsInMenuPause= true;
-    public GameObject MenuPausaUI, MenuOpcionesUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu, cambita;
+    public GameObject MenuPausaUI, MenuOpcionesUI, MenuInventarioUI, botonVolverJuego,botonInventario,botonOpciones,botonVolverMenu, cambita;
 
     LogicaCambioNivel cambiar = new LogicaCambioNivel();
 
     MenuPausaOpciones misOpciones;
+
+    MenuInventario miInventario;
 
     // Update is called once per frame
     private void Start() {
@@ -37,6 +39,12 @@ public class MenuPausa : MonoBehaviour
          LoadMenu();
          break;
          case "Inventario":
+         GameIsInMenuPause = false;
+         MenuInventarioUI.SetActive(true);
+         MenuPausaUI.SetActive(false);
+         EventSystem.current.SetSelectedGameObject(null);
+         miInventario=cambita.GetComponent<MenuInventario>();
+         miInventario.GameIsInControles = true;
          break;
          case "Opciones":
          GameIsInMenuPause = false;
