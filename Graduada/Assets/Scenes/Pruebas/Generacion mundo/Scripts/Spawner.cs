@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     private int maxHab;
     private int tamano;
     private bool spawned = false;
+    private bool bar = false;
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
@@ -31,11 +32,18 @@ public class Spawner : MonoBehaviour
                 if(Templates.numHab == maxHab){
                     //Debug.Log("Arriba max");
                     Destroy(gameObject);
-                    Instantiate(templates.BottomRooms[tamano-1], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
+                    if(bar){
+                        Instantiate(templates.BottomRooms[tamano-2], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
+                    }else{
+                        bar = true;
+                        Instantiate(templates.BottomRooms[tamano-1], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
+                    }
                 }
                 else{
                     //Debug.Log("Arriba");
                     rand = Random.Range(0, tamano);
+                    if(rand == tamano && bar == false) bar = true;
+                    else if(rand == tamano && bar == true) rand = rand - 1;
                     Destroy(gameObject);
                     Instantiate(templates.BottomRooms[rand], transform.position, templates.BottomRooms[rand].transform.rotation);
                     Templates.numHab+=1;
