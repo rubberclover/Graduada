@@ -537,7 +537,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volver
+  m_Text: 'Salir
+
+'
 --- !u!222 &433848825
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -887,7 +889,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776ee87236b5d454d9aa04241dfaeceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsInMenuPause: 1
   MenuPausaUI: {fileID: 1242815117}
+  MenuOpcionesUI: {fileID: 0}
+  MenuInventarioUI: {fileID: 0}
+  botonVolverJuego: {fileID: 0}
+  botonInventario: {fileID: 0}
+  botonOpciones: {fileID: 0}
+  botonVolverMenu: {fileID: 0}
+  cambita: {fileID: 0}
 --- !u!1 &525473938
 GameObject:
   m_ObjectHideFlags: 0
