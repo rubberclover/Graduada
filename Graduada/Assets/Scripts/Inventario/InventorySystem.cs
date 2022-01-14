@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System;
 
 
@@ -13,11 +14,13 @@ public class InventorySystem : MonoBehaviour
     [SerializeField]
     public List<InventoryItem> inventory;
 
+    public GameObject inventoryPanel;
+
     private void Awake()
     {
         current = this;
         inventory = new List<InventoryItem>();
-        m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>(); 
+        m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
     }
 
     public InventoryItem Get(InventoryItemData referenceData)
@@ -32,12 +35,13 @@ public class InventorySystem : MonoBehaviour
     {
         if(m_itemDictionary.TryGetValue(referenceData, out InventoryItem value)){
             value.AddToStack();
+            inventoryPanel.GetComponent<Panel>().UpdateInventory();
         }
         else{
             InventoryItem newItem = new InventoryItem(referenceData);
             inventory.Add(newItem);
             m_itemDictionary.Add(referenceData, newItem);
-            print("SE HA AÑADIDO");
+            inventoryPanel.GetComponent<Panel>().UpdateInventory();
         }
     }
 
@@ -50,9 +54,12 @@ public class InventorySystem : MonoBehaviour
                 inventory.Remove(value);
                 m_itemDictionary.Remove(referenceData);
             }
+
+            inventoryPanel.GetComponent<Panel>().UpdateInventory();
         }
     }
 }
+
 
 [Serializable]
 public class InventoryItem
