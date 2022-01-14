@@ -15,12 +15,10 @@ public class Spawner : MonoBehaviour
     private int maxHab;
     private int tamano;
     private bool spawned = false;
-    //public bool bar;
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("ListasHabitaciones").GetComponent<Templates>();
         maxHab = templates.maxHab;
-        //bar = templates.bar;
         Invoke("Spawn", 0.5f);
     }
     void Spawn()
@@ -33,30 +31,11 @@ public class Spawner : MonoBehaviour
                 if(Templates.numHab == maxHab){
                     //Debug.Log("Arriba max");
                     Destroy(gameObject);
-                    if(Templates.bar){
-                        Instantiate(templates.BottomRooms[tamano-2], transform.position, templates.BottomRooms[tamano-2].transform.rotation);
-                    }else{
-                        StartCoroutine(esperar(Random.Range(1,5)));
-                        if(Templates.bar == false){
-                            Debug.Log("Spawneo bar" + Templates.bar);
-                            Templates.bar = true;
-                            Debug.Log("Spawneo bar" + Templates.bar);
-                            Instantiate(templates.BottomRooms[tamano-1], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
-                        }
-                    }
+                    Instantiate(templates.BottomRooms[tamano-1], transform.position, templates.BottomRooms[tamano-1].transform.rotation);
                 }
                 else{
                     //Debug.Log("Arriba");
                     rand = Random.Range(0, tamano);
-                    if(rand == tamano -1 && Templates.bar == false){
-                        StartCoroutine(esperar(Random.Range(1,5)));
-                        if(Templates.bar == false){
-                            Debug.Log("Spawneo bar" + Templates.bar);
-                            Templates.bar = true;
-                            Debug.Log("Spawneo bar" + Templates.bar);
-                        }
-                    } 
-                    else if(rand == tamano -1 && Templates.bar == true) rand = rand - 1;
                     Destroy(gameObject);
                     Instantiate(templates.BottomRooms[rand], transform.position, templates.BottomRooms[rand].transform.rotation);
                     Templates.numHab+=1;
@@ -117,9 +96,6 @@ public class Spawner : MonoBehaviour
         if(otro.CompareTag("Colision")){
             Destroy(transform.parent.gameObject);
         }
-    }
-    private IEnumerator esperar(int segundos){
-        yield return new WaitForSeconds(segundos/10);
     }
 }
 

@@ -4102,7 +4102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: Volver
 --- !u!222 &666986825
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7531,7 +7531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
       propertyPath: BottomRooms.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
       propertyPath: TopRooms.Array.data[2]
@@ -7589,10 +7589,6 @@ PrefabInstance:
       propertyPath: BottomRooms.Array.data[4]
       value: 
       objectReference: {fileID: 8572322484792515072, guid: da37353a456760543bd852c11a4fab4d, type: 3}
-    - target: {fileID: 8129518983522698420, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
-      propertyPath: BottomRooms.Array.data[5]
-      value: 
-      objectReference: {fileID: 7258461731064588185, guid: e70135aede530ac4ebc1feedb49acd8c, type: 3}
     - target: {fileID: 8134874413265556345, guid: 53fed848ac225bb49877dd2614c0f48d, type: 3}
       propertyPath: m_Enabled
       value: 1
